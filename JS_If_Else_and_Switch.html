@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>If / Else & Switch</title>
+</head>
+<body>
+<script>
+
+    // General If / Else
+    // operators = (==, >=, >, <=, <, !=, &&, ||, !==and===)
+    x = 0;
+    if (x == 0) {
+      console.log(x, 'is zero');
+      } else {
+      console.log(x, 'is nonZero');
+      }
+
+
+    let legalLimit = 21;
+    let yourAge = 40;
+    if (yourAge > legalLimit) {
+      console.log('You can booze it up!');
+      } else {
+      console.log("Sorry you're under age");
+      }
+
+
+    let speedLimit = 40
+    function mySpeed(int) {
+      if (int > speedLimit) {
+        console.log('Stop Speeding!');
+    } else {
+        console.log('You are safe');
+    }}
+    mySpeed(41)
+
+
+    // Checking multiple conditions to be true
+    let paycheck = 300;
+    let bill = 25;
+    let mortgage = 200;
+
+    function difference() {
+      diff = paycheck - (bill + mortgage);
+      if ((diff > 0) && (paycheck > 0)) {
+          console.log('You have monies!')
+      } else {
+          console.log('You are negative :(')
+      }}
+      difference()
+
+
+    // Variations of If / Else
+    // if
+    // if / else if / else
+    // if / else
+
+
+    // Switch Statements
+    color = 'red';
+    switch (color) {
+      case 'red':
+        console.log('RED color found');
+        break;
+      case 'yellow':
+        console.log('YELLOW color found');
+        break;
+      case 'green':
+        console.log('GREEN color found');
+        break;
+      case 'black':
+        console.log('BLACK color found');
+        break;
+      default:
+        console.log('color NOT found');
+    }
+
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Scope</title>
+</head>
+<body>
+  <script>
+
+    // // Global Scope
+    // // If a variable does not have a "var" keyword, it's
+    // // lobal, any code on the page has access to read and
+    // // modify this variable.
+    // funny = 'This is a global variable';  // global variable
+    // let counter = 0; // global variable
+    // function testVars() {
+    //   outside = "outside: I'm global"; // global variable
+    //   let inside = "inside: I'm local";  // local variable
+    // }
+    // console.log(funny);
+    // console.log(counter);
+    // testVars();
+    // console.log(outside);  // No error - global variable
+    // console.log(inside);  // ReferenceError - local variable
+
+
+    // // Declarations using "var" do NOT support block scoping.
+    // // In many languages, variables delcared inside a block
+    // // are part of that blocks own scope, meaning local.
+    // // NOT javascript, it doesnt support block scoping.
+    // function checkWeight(weight) {
+    //   if (weight > 5000) {
+    //     let text = 'No free shipping';
+    //     alert(text);
+    //   }
+    //   alert(text);
+    // }
+    // checkWeight(6000);
+
+    // However...the "let" keyword in ECMAScript
+    // lets you declare variables that are block scoped.
+    // let x = 100;
+    // function blockscoping() {
+    //   if (true) {
+    //     let x = 350;
+    //     alert(x);
+    //   }
+    //   alert(x);
+    // }
+    // blockscoping();
+
+
+    // // "Variable Hoisting"
+    // // When javascript encourters a function, one of the first
+    // // things it does is scan the full body of code for any
+    // // declared variables, then initializes them by default
+    // // with a value of "undefined". Because the function
+    // // sees foo before its properly defined.
+    // let foo = 'Hello';
+    // function doSomethingClever() {
+    //   console.log(foo);
+    //   let foo = 'Good Bye';
+    //   console.log(foo);
+    // }
+    // doSomethingClever();
+    // //undefined
+    // //'Good bye'
+
+    
+
+
+  </script>
+</body>
+</html>
