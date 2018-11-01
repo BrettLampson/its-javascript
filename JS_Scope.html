@@ -1,33 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Scope</title>
 </head>
+
 <body>
   <script>
 
     // // Global Scope
     // // If a variable does not have a "var" keyword, it's
-    // // lobal, any code on the page has access to read and
+    // // global, any code on the page has access to read and
     // // modify this variable.
     // funny = 'This is a global variable';  // global variable
+    // console.log(funny);
     // let counter = 0; // global variable
+    // console.log(counter);
     // function testVars() {
     //   outside = "outside: I'm global"; // global variable
     //   let inside = "inside: I'm local";  // local variable
     // }
-    // console.log(funny);
-    // console.log(counter);
     // testVars();
     // console.log(outside);  // No error - global variable
-    // console.log(inside);  // ReferenceError - local variable
+    // console.log(inside);  // ReferenceError - because its local
 
 
-    // // Declarations using "var" do NOT support block scoping.
-    // // In many languages, variables delcared inside a block
-    // // are part of that blocks own scope, meaning local.
-    // // NOT javascript, it doesnt support block scoping.
+    // Declarations using "var" do NOT support block scoping.
+    // In many languages, variables delcared inside a block
+    // are part of that blocks own scope, meaning local.
+    // NOT javascript, it doesnt support block scoping.
     // function checkWeight(weight) {
     //   if (weight > 5000) {
     //     let text = 'No free shipping';
@@ -37,7 +39,7 @@
     // }
     // checkWeight(6000);
 
-    // However...the "let" keyword in ECMAScript
+    // However...the "let" keyword in ECMAScript 6
     // lets you declare variables that are block scoped.
     // let x = 100;
     // function blockscoping() {
@@ -66,9 +68,10 @@
     // //undefined
     // //'Good bye'
 
-    
+
 
 
   </script>
 </body>
+
 </html>
