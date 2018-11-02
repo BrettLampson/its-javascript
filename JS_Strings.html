@@ -1,16 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Strings</title>
 </head>
+
 <body>
   <script>
 
     // #--------------------------------------------------------------------------#
     // Strings
     // #--------------------------------------------------------------------------#
-  
+
+    // All string methods return a new string. They don't modify the original string.
+    // Formally said: Strings are immutable: Strings cannot be changed, only replaced.
+    
+    let text = "Please locate where 'locate' occurs";
+    // String Methods
+
+    console.log(text.anchor
+    
+    console.log(text.big
+    
+    console.log(text.blink
+    
+    console.log(text.bold
+    
+    console.log(text.charAt
+    
+    console.log(text.charCodeAt(0));
+    // The charCodeAt() method returns the unicode of the character at a specified index in a string:
+    // The method returns a UTF-16 code (an integer between 0 and 65535).
+    
+    console.log(text.codePointAt
+    
+    console.log(text.concat(' ', 'Thanks!'));
+    // concat() joins two or more strings:
+
+    console.log(text.endsWith
+    
+    console.log(text.fixed
+    
+    console.log(text.fontcolor
+    
+    console.log(text.fontsize
+    
+    console.log(text.includes
+
+    console.log(text.indexOf('where');
+
+    console.log(text.indexOf('locate', 3);
+
+    console.log(text.italics
+    
+    console.log(text.lastIndexOf('locate');
+
+    console.log(text.length);
+
+    console.log(text.link
+    
+    console.log(text.localeCompare
+    
+    console.log(text.match
+    
+    console.log(text.normalize
+    
+    console.log(text.repeat
+    
+    console.log(text.replace('please', 'Hey')
+    // The replace() method does not change the string it is called on. It returns a new string.
+    
+    console.log(text.search()
+    
+    console.log(text.slice(1, 3));
+
+    console.log(text.small
+    
+    console.log(text.split
+    // Convert a string to an array
+    
+    console.log(text.startsWith
+    
+    console.log(text.strike
+    
+    console.log(text.sub
+    
+    console.log(text.substr
+    // substr() is similar to slice().
+    // The difference is that the second parameter specifies the length of the extracted part.
+    
+    console.log(text.substring(7, 13));
+    //substring() is similar to slice().
+    //The difference is that substring() cannot accept negative indexes.
+
+    console.log(text.sup
+    
+    console.log(text.toLocaleLowerCase
+    
+    console.log(text.toLocaleUpperCase
+    
+    console.log(text.toLowerCase
+    
+    console.log(text.toString
+    
+    console.log(text.toUpperCase
+    
+    console.log(text.trim
+    
+    console.log(text.valueOf
+
+
   </script>
 </body>
+
 </html>
