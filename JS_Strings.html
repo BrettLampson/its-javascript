@@ -16,99 +16,135 @@
     // All string methods return a new string. They don't modify the original string.
     // Formally said: Strings are immutable: Strings cannot be changed, only replaced.
     
-    let text = "Please locate where 'locate' occurs";
-    // String Methods
 
-    console.log(text.anchor
+    // #--------------------------------------------------------------------------#
+    // String Methods
+    // #--------------------------------------------------------------------------#
+    let text = "Please locate where 'locate' occurs";
+
+    // console.log(text.anchor('hello'));
+    // // <a name="hello">Please locate where 'locate' occurs</a>
     
-    console.log(text.big
+    // console.log(text.big('hello'));
+    // // <big>Please locate where 'locate' occurs</big>
     
-    console.log(text.blink
+    // console.log(text.blink('hello'));
+    // // <blink>Please locate where 'locate' occurs</blink>
     
-    console.log(text.bold
+    // console.log(text.bold('hello'));
     
-    console.log(text.charAt
+    // console.log(text.charAt('hello'));
     
-    console.log(text.charCodeAt(0));
+    // console.log(text.charCodeAt(0));
     // The charCodeAt() method returns the unicode of the character at a specified index in a string:
     // The method returns a UTF-16 code (an integer between 0 and 65535).
     
-    console.log(text.codePointAt
+    // console.log(text.codePointAt
     
-    console.log(text.concat(' ', 'Thanks!'));
-    // concat() joins two or more strings:
+    // console.log(text.concat(' ', 'Thanks!'));
+    // // concat() joins two or more strings:
 
-    console.log(text.endsWith
+    // console.log(text.endsWith
     
-    console.log(text.fixed
+    // console.log(text.fixed
     
-    console.log(text.fontcolor
+    // console.log(text.fontcolor
     
-    console.log(text.fontsize
+    // console.log(text.fontsize
     
-    console.log(text.includes
+    // console.log(text.includes
 
-    console.log(text.indexOf('where');
 
-    console.log(text.indexOf('locate', 3);
+    // // str.indexof()
+    // console.log(text.indexOf('locate'));
+    // // 7
+    // console.log(text.indexOf('locate', 3));  
+    // // 7 because at 7 is the first 'locate'
+    // console.log(text.indexOf('locate', 7));  
+    // // 7 because at 7 is the first 'locate'
+    // console.log(text.indexOf('locate', 8));  
+    // // 21 because at or after index 8 the next 'locate' is at 21
 
-    console.log(text.italics
-    
-    console.log(text.lastIndexOf('locate');
 
-    console.log(text.length);
+    // // str.italics()
+    // console.log(text.italics('Hello'));
+    // // <i>Please locate where 'locate' occurs</i>
 
-    console.log(text.link
-    
-    console.log(text.localeCompare
-    
-    console.log(text.match
-    
-    console.log(text.normalize
-    
-    console.log(text.repeat
-    
-    console.log(text.replace('please', 'Hey')
-    // The replace() method does not change the string it is called on. It returns a new string.
-    
-    console.log(text.search()
-    
-    console.log(text.slice(1, 3));
 
-    console.log(text.small
-    
-    console.log(text.split
-    // Convert a string to an array
-    
-    console.log(text.startsWith
-    
-    console.log(text.strike
-    
-    console.log(text.sub
-    
-    console.log(text.substr
-    // substr() is similar to slice().
-    // The difference is that the second parameter specifies the length of the extracted part.
-    
-    console.log(text.substring(7, 13));
-    //substring() is similar to slice().
-    //The difference is that substring() cannot accept negative indexes.
+    // // str.lastIndexOf()
+    // console.log(text.lastIndexOf('locate'));
 
-    console.log(text.sup
+    // // str.length()
+    // console.log(text.length);
+    // // 35
+
+
+    // // str.link()
+    // console.log(text.link
+
+
+    // // str.localeCompare()
+    // console.log(text.localeCompare
     
-    console.log(text.toLocaleLowerCase
+    // console.log(text.match
     
-    console.log(text.toLocaleUpperCase
+    // console.log(text.normalize
     
-    console.log(text.toLowerCase
+    // console.log(text.repeat
     
-    console.log(text.toString
+    // console.log(text.replace('please', 'Hey')
+    // // The replace() method does not change the string it is called on. It returns a new string.
     
-    console.log(text.toUpperCase
+
+    // // str.search()
+    // console.log(text.search('locate'));
+    // // 7 it will ONLY show first instance
+    // Can take powerful search values (regular expressions)
+
+
+    // // str.slice(include, exclude)
+    // console.log(text.slice(1, 5));
+    // // leas
     
-    console.log(text.trim
+
+    // // str.small()
+    // console.log(text.small('hello'));
+    // // <small>Please locate where 'locate' occurs</small>
     
-    console.log(text.valueOf
+
+    // // str.split()
+    // console.log(text.split
+    // // Convert a string to an array
+    
+    // console.log(text.startsWith
+    
+    // console.log(text.strike
+    
+    // console.log(text.sub
+    
+    // console.log(text.substr
+    // // substr() is similar to slice().
+    // // The difference is that the second parameter specifies the length of the extracted part.
+    
+    // console.log(text.substring(7, 13));
+    // //substring() is similar to slice().
+    // //The difference is that substring() cannot accept negative indexes.
+
+    // console.log(text.sup
+    
+    // console.log(text.toLocaleLowerCase
+    
+    // console.log(text.toLocaleUpperCase
+    
+    // console.log(text.toLowerCase
+    
+    // console.log(text.toString
+    
+    // console.log(text.toUpperCase
+    
+    // console.log(text.trim
+    
+    // console.log(text.valueOf
 
 
   </script>
