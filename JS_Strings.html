@@ -8,53 +8,79 @@
 
 <body>
   <script>
-
+    
     // #--------------------------------------------------------------------------#
     // Strings
     // #--------------------------------------------------------------------------#
-
+    
+    // IMPORTANT
     // All string methods return a new string. They don't modify the original string.
     // Formally said: Strings are immutable: Strings cannot be changed, only replaced.
     
-
     // #--------------------------------------------------------------------------#
     // String Methods
     // #--------------------------------------------------------------------------#
     let text = "Please locate where 'locate' occurs";
-
+    
+    // #--------------------------------------------------------------------------#
+    // // str.anchor()
     // console.log(text.anchor('hello'));
     // // <a name="hello">Please locate where 'locate' occurs</a>
     
+    // #--------------------------------------------------------------------------#
+    // // str.big()
     // console.log(text.big('hello'));
     // // <big>Please locate where 'locate' occurs</big>
     
+    // #--------------------------------------------------------------------------#
+    // // str.blink()
     // console.log(text.blink('hello'));
     // // <blink>Please locate where 'locate' occurs</blink>
     
+    // #--------------------------------------------------------------------------#
+    // // str.bold()
     // console.log(text.bold('hello'));
     
+    // #--------------------------------------------------------------------------#
+    // // str.charAt()
     // console.log(text.charAt('hello'));
     
-    // console.log(text.charCodeAt(0));
-    // The charCodeAt() method returns the unicode of the character at a specified index in a string:
+    // #--------------------------------------------------------------------------#
+    // str.charCodeAt()
+    // console.log(text.charCodeAt(21));
+    // Returns the unicode character at a specified index
     // The method returns a UTF-16 code (an integer between 0 and 65535).
     
+    // #--------------------------------------------------------------------------#
+    // // str.codePointAt()
     // console.log(text.codePointAt
     
+    // #--------------------------------------------------------------------------#
+    // // str.concat()
     // console.log(text.concat(' ', 'Thanks!'));
     // // concat() joins two or more strings:
-
+    
+    // #--------------------------------------------------------------------------#
+    // // str.endsWith()
     // console.log(text.endsWith
     
+    // #--------------------------------------------------------------------------#
+    // // str.fixed()
     // console.log(text.fixed
     
+    // #--------------------------------------------------------------------------#
+    // // str.fontcolor()
     // console.log(text.fontcolor
     
+    // #--------------------------------------------------------------------------#
+    // // str.fontsize()
     // console.log(text.fontsize
     
+    // #--------------------------------------------------------------------------#
+    // // str.includes()
     // console.log(text.includes
 
-
+    // #--------------------------------------------------------------------------#
     // // str.indexof()
     // console.log(text.indexOf('locate'));
     // // 7
@@ -65,85 +91,120 @@
     // console.log(text.indexOf('locate', 8));  
     // // 21 because at or after index 8 the next 'locate' is at 21
 
-
+    // #--------------------------------------------------------------------------#
     // // str.italics()
     // console.log(text.italics('Hello'));
     // // <i>Please locate where 'locate' occurs</i>
 
-
+    // #--------------------------------------------------------------------------#
     // // str.lastIndexOf()
     // console.log(text.lastIndexOf('locate'));
 
+    // #--------------------------------------------------------------------------#
     // // str.length()
     // console.log(text.length);
     // // 35
 
-
+    // #--------------------------------------------------------------------------#
     // // str.link()
     // console.log(text.link
 
-
+    // #--------------------------------------------------------------------------#
     // // str.localeCompare()
     // console.log(text.localeCompare
     
+    // #--------------------------------------------------------------------------#
+    // // str.match()
     // console.log(text.match
     
+    // #--------------------------------------------------------------------------#
+    // // str.normalize()
     // console.log(text.normalize
     
+    // #--------------------------------------------------------------------------#
+    // // str.repeat()
     // console.log(text.repeat
     
+    // #--------------------------------------------------------------------------#
+    // // replace()
     // console.log(text.replace('please', 'Hey')
     // // The replace() method does not change the string it is called on. It returns a new string.
     
-
+    // #--------------------------------------------------------------------------#
     // // str.search()
     // console.log(text.search('locate'));
     // // 7 it will ONLY show first instance
     // Can take powerful search values (regular expressions)
 
-
+    // #--------------------------------------------------------------------------#
     // // str.slice(include, exclude)
     // console.log(text.slice(1, 5));
     // // leas
     
-
+    // #--------------------------------------------------------------------------#
     // // str.small()
     // console.log(text.small('hello'));
     // // <small>Please locate where 'locate' occurs</small>
     
-
+    // #--------------------------------------------------------------------------#
     // // str.split()
     // console.log(text.split
     // // Convert a string to an array
     
+    // #--------------------------------------------------------------------------#
+    // // str.startsWith()
     // console.log(text.startsWith
     
+    // #--------------------------------------------------------------------------#
+    // // str.strike()
     // console.log(text.strike
     
+    // #--------------------------------------------------------------------------#
+    // // str.sub()
     // console.log(text.sub
     
+    // #--------------------------------------------------------------------------#
+    // // str.substr()
     // console.log(text.substr
     // // substr() is similar to slice().
     // // The difference is that the second parameter specifies the length of the extracted part.
     
+    // #--------------------------------------------------------------------------#
+    // // str.substring()
     // console.log(text.substring(7, 13));
     // //substring() is similar to slice().
     // //The difference is that substring() cannot accept negative indexes.
-
+    
+    // #--------------------------------------------------------------------------#
+    // // str.sup()
     // console.log(text.sup
     
+    // #--------------------------------------------------------------------------#
+    // // str.toLocaleLowerCase()
     // console.log(text.toLocaleLowerCase
     
+    // #--------------------------------------------------------------------------#
+    // // str.toLocaleUpperCase()
     // console.log(text.toLocaleUpperCase
     
+    // #--------------------------------------------------------------------------#
+    // // str.toLowerCase()
     // console.log(text.toLowerCase
     
+    // #--------------------------------------------------------------------------#
+    // // str.toString()
     // console.log(text.toString
     
+    // #--------------------------------------------------------------------------#
+    // // str.toUpperCase()
     // console.log(text.toUpperCase
     
+    // #--------------------------------------------------------------------------#
+    // // str.trim()
     // console.log(text.trim
     
+    // #--------------------------------------------------------------------------#
+    // // str.valueOf()
     // console.log(text.valueOf
 
 
