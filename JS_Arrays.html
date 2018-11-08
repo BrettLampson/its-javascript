@@ -20,6 +20,12 @@
     
     // #--------------------------------------------------------------------------#
     // fam.concat()
+    // let one = ['Thing 1']
+    // let two = ['Thing 2']
+    // console.log(one.concat(two)); // ["Thing 1", "Thing 2"]
+    // console.log(one); // Thing 1 remains the same
+    // console.log(two); // Thing 2 remains the same
+        
 
     // #--------------------------------------------------------------------------#
     // fam.copyWithin()
@@ -47,6 +53,10 @@
 
     // #--------------------------------------------------------------------------#
     // fam.indexOf()
+    // let nums = ['one', 'two', 'three'];
+    // console.log(nums.indexOf('two', 0)); // look for 'two' start at index 0
+    // // 1
+    
 
     // #--------------------------------------------------------------------------#
     // fam.join()
@@ -65,9 +75,15 @@
 
     // #--------------------------------------------------------------------------#
     // fam.pop()
+    // let lastItem = fam.pop(); // Removes last item in array and stores it
+    // console.log(lastItem); // Oliver
+    // console.log(typeof lastItem); // String
+    // console.log(fam); // ["Brett", "Shaina", "Kayden"]
 
     // #--------------------------------------------------------------------------#
     // fam.push()
+    // console.log(fam.push('Elsa')); // 5
+    // console.log(fam); // ["Brett", "Shaina", "Kayden", "Oliver", "Elsa"]
 
     // #--------------------------------------------------------------------------#
     // fam.reduce()
@@ -80,9 +96,20 @@
 
     // #--------------------------------------------------------------------------#
     // fam.shift()
+    // let firstItem = fam.shift(); // Removes 1st item in array and stores it
+    // console.log(firstItem); // Brett
+    // console.log(typeof firstItem); // String
+    // console.log(fam); // ["Shaina", "Kayden", "Oliver"]
 
     // #--------------------------------------------------------------------------#
     // fam.slice()
+    // let fam2 = ['Brett', 'Shaina', 'Kayden', 'Oliver']
+    // console.log(fam2.indexOf('Oliver')); // 3
+    // console.log(fam2.length); // 4
+    // let kids = fam.slice(2, 4); // include 2, don't include 4
+    // console.log(kids); // ["Kayden", "Oliver"]
+    
+    
 
     // #--------------------------------------------------------------------------#
     // fam.some()
@@ -101,6 +128,8 @@
 
     // #--------------------------------------------------------------------------#
     // fam.unshift()
+    // console.log(fam.unshift('Elsa')); // 5
+    // console.log(fam); // ["Elsa", "Brett", "Shaina", "Kayden", "Oliver"]
 
     // #--------------------------------------------------------------------------#
     // fam.values()

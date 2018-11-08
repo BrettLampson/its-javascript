@@ -38,7 +38,7 @@
     // // <blink>Please locate where 'locate' occurs</blink>
     
     // #--------------------------------------------------------------------------#
-    // // str.bold()
+    // // // str.bold()
     // console.log(text.bold('hello'));
     
     // #--------------------------------------------------------------------------#
@@ -115,7 +115,9 @@
     
     // #--------------------------------------------------------------------------#
     // // str.match()
-    // console.log(text.match
+    // let phrase = 'email me at info@gmail.com'
+    // console.log(phrase.match(['@']));
+    // // ["@", index: 16, input: "email me at info@gmail.com", groups: undefined]
     
     // #--------------------------------------------------------------------------#
     // // str.normalize()
@@ -126,9 +128,9 @@
     // console.log(text.repeat
     
     // #--------------------------------------------------------------------------#
-    // // replace()
-    // console.log(text.replace('please', 'Hey')
-    // // The replace() method does not change the string it is called on. It returns a new string.
+    // // replace('current', 'new')
+    // console.log(text.replace('Please', 'Heyyy'));
+    // // Heyyy locate where 'locate' occurs
     
     // #--------------------------------------------------------------------------#
     // // str.search()
@@ -148,8 +150,8 @@
     
     // #--------------------------------------------------------------------------#
     // // str.split()
-    // console.log(text.split
-    // // Convert a string to an array
+    // console.log(text.split(' '));  
+    // // ["Please", "locate", "where", "'locate'", "occurs"]
     
     // #--------------------------------------------------------------------------#
     // // str.startsWith()
@@ -164,8 +166,9 @@
     // console.log(text.sub
     
     // #--------------------------------------------------------------------------#
-    // // str.substr()
-    // console.log(text.substr
+    // // str.substr([start], [length])
+    // console.log(text.substr(0, 13));  // Please locate
+    // console.log(text.substr(7));      // locate where 'locate' occurs
     // // substr() is similar to slice().
     // // The difference is that the second parameter specifies the length of the extracted part.
     
@@ -189,7 +192,8 @@
     
     // #--------------------------------------------------------------------------#
     // // str.toLowerCase()
-    // console.log(text.toLowerCase
+    // console.log(text.toLowerCase());
+    // // please locate where 'locate' occurs
     
     // #--------------------------------------------------------------------------#
     // // str.toString()
@@ -197,7 +201,8 @@
     
     // #--------------------------------------------------------------------------#
     // // str.toUpperCase()
-    // console.log(text.toUpperCase
+    // console.log(text.toUpperCase());
+    // // PLEASE LOCATE WHERE 'LOCATE' OCCURS
     
     // #--------------------------------------------------------------------------#
     // // str.trim()
