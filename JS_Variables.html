@@ -1,31 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <title>Variables</title>
 </head>
-<body>
-<script>
 
-      // Variables cannot start with a number
-      //           cannot be a reserved keyword
-      //           cannot contain a space or hyphen -
-      // Variables can start with a letter, underscore (_), or dollar sign ($)
-      let myText = 'Hello Var';
-      console.log(myText)
+<body>
+  <script>
+
+    // #--------------------------------------------------------------------------#
+    // Variables
+    // #--------------------------------------------------------------------------#
+
+
+      // // Variables cannot start with a number
+      // //           cannot be a reserved keyword
+      // //           cannot contain a space or hyphen -
+      // // Variables can start with a letter, underscore (_), or dollar sign ($)
+      // let myText = 'Hello Var';
+      // // This statement does 2 things: declares the variable and assigns a value to it.
+      // myText = 'Hi Var';  // notice we don't use "let" keyword to reassign it.
+      // console.log(myText); 
+      // // let myText = 'Ahoy Var' // SyntaxError
+
+
+      // // Primitives OR Objects
+      // In javascript values are either Primitives or Objects.
+      // Primitives:
+      // String - working with text
+      // Number - working with numbers
+      // Boolean - working with true or false
+      // Null - digital equivalent of nothing
+      // Undefined - when a value should exist but doesn't
+      // Object - A shell for other types including other objects
 
 
       // "var" keyword isn't required,
       // BUT when you omit "var" you are declaring it globally
-      myGlobalVar = 'Hello Global Var';
-      console.log(myGlobalVar)
+      // myGlobalVar = 'Hello Global Var';
+      // console.log(myGlobalVar)
 
 
       // Declaring and initializing variables can span multiple statements
-      let myVar;
-      myVar = 'Hello Var Spanning Multiple Statements';
-      console.log(myVar)
+      // let myVar;
+      // myVar = 'Hello Var Spanning Multiple Statements';
+      // console.log(myVar)
 
 
   </script>
 </body>
+
 </html>
