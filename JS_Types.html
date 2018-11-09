@@ -11,6 +11,9 @@
     // Types (Primitives and Objects)
     // #--------------------------------------------------------------------------#
   
+    // // Primitives OR Objects
+    // In javascript values are either Primitives or Objects.
+
     // Primitives:
     // String - working with text
     // Number - working with numbers
@@ -18,38 +21,48 @@
     // Null - digital equivalent of nothing
     // Undefined - when a value should exist but doesn't
     // Object - A shell for other types including other objects
+    
+    // Objects in Javascript that also exist as Primitives:
+    // Array
+    // Boolean
+    // Date
+    // Function
+    // Math
+    // Number
+    // RegExp
+    // String
 
     // // Primitives vs. Objects
     // // Array
-    // var names = ['Bob', 'Alice', 'Luke'];
-    // var alsoNames = new Array('Bob', 'Alice', 'Luke');
+    var names = ['Bob', 'Alice', 'Luke']; // Array primitive
+    var alsoNames = new Array('Bob', 'Alice', 'Luke'); // Array Object
     // console.log(names);
     // console.log(alsoNames);
     
     // // round number
-    // var roundNumber = Math.round(3.14);
+    var roundNumber = Math.round(3.14);
     // console.log(roundNumber);
     
     // // todays date
-    // var todayDate = new Date()
+    var todayDate = new Date()
     // console.log(todayDate);
 
     // // boolean object
-    // var booleanObj = new Boolean(true);
+    var booleanObj = new Boolean(true);
     // console.log(booleanObj);
 
     // // infinity
-    // var unquantifiablyBigNumber = Infinity;
+    var unquantifiablyBigNumber = Infinity;
 
     // // string object
-    // var hello = new String('Hello!');
+    var hello = new String('Hello!');
 
     // // String Literal vs. String Object
-    // var movie = 'Pulp Fiction'
-    // var movieObj = new String('Pulp Fiction');
+    var movie = 'Pulp Fiction'
+    var movieObj = new String('Pulp Fiction');
     // alert(movie);
     // alert(movieObj);
-    // // These look the same, but under the hood are very different
+    // These look the same, but under the hood are very different
     
 
   </script>
