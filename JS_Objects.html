@@ -11,8 +11,15 @@
     // Objects
     // #--------------------------------------------------------------------------#
   
-    // Pre-defined objects in Javascript that also exist as Primitives:
-    // Array, Boolean, Date, Function, Math, Number, RegExp, String
+    // Objects in Javascript that also exist as Primitives:
+    // Array
+    // Boolean
+    // Date
+    // Function
+    // Math
+    // Number
+    // RegExp
+    // String
     
     // // Array
     // // Create an Object using "new" keyword followed by the Object Type
@@ -24,7 +31,6 @@
     // console.log(typeof(fam));
     // console.log(typeof(alsoFam));
     
-
     // // Boolean
     // let booleanObj = new Boolean(true);
     
@@ -49,7 +55,27 @@
     // console.log(typeof textObj);        // object
     // console.log(typeof textObj.length); // number
 
+
+    // Creating an object
+    let funnyGuy = {}; // initializing the object using {}
+    // console.log(typeof funnyGuy); // object
+    // console.log(funnyGuy.toString()); // [object Object]
+    // Create properties:
+    funnyGuy.firstName = "Babe";
+    funnyGuy.middleName= "Herman";
+    funnyGuy.lastName = "Ruth";
+    // Create a method
+    function getName() {
+      return funnyGuy.firstName + ' ' + 
+      funnyGuy.middleName + ' ' + 
+      funnyGuy.lastName
+    }
+    console.log(getName()); // Babe Herman Ruth
     
+    
+
+    
+
 
     
     
