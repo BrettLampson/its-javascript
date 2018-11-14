@@ -1,17 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Objects</title>
 </head>
+
 <body>
   <script>
 
     // #--------------------------------------------------------------------------#
     // Objects
     // #--------------------------------------------------------------------------#
-  
-    // Objects in Javascript that also exist as Primitives:
+    // A special internal property __proto__ given to all objects.
+    // / "Prototype Chain"
+    // // Objects have base level "Prototype" properties.  If your object
+    // // doesn't have what you're looking for (properties, methods, etc)
+    // // the javascript engine will check the next object as determined
+    // // by the "prototype" property until the end, which is when you 
+    // // try access the "prototype" property on the Object itself.
+
+    // A primitive value is a value that has no properties or methods.
+    // A primitive data type is data that has a primitive value.
+    // Objects in Javascript that also exist as primitives:
     // Array
     // Boolean
     // Date
@@ -20,65 +31,96 @@
     // Number
     // RegExp
     // String
-    
-    // // Array
-    // // Create an Object using "new" keyword followed by the Object Type
-    // // In this case "Array()" is known as a constructor function.
 
-    // let fam = ['Brett', 'Shaina', 'Kayden', 'Oliver'];
-    // let alsoFam = new Array('Brett', 'Shaina', 'Kayden', 'Oliver');
-    // console.log(fam);
-    // console.log(typeof(fam));
-    // console.log(typeof(alsoFam));
-    
-    // // Boolean
-    // let booleanObj = new Boolean(true);
-    
-    // // Date
-    // let today = new Date();
-    
-    // // Function
-    // function squareX(x) {
-    //   return x * x
-    // }
-    // console.log(squareX(4));
-    // console.log(typeof squareX);
-  
-    // // Math
-    // let num = Math.round('3.14');    
-    
-    // // String
-    // let text = 'Hello';
-    // let textObj = new String('Hello');
+
+// #--------------------------------------------------------------------------#
+    // CREATE AN OBJECT... an object literal in this case
+    let thingObj = {}; // object
+    // Create an Object using "new" keyword followed by the Object Type
+    // Array
+    let fam = ['Brett', 'Shaina', 'Kayden', 'Oliver']; // object
+    let alsoFam = new Array('Brett', 'Shaina'); // object using constructor function
+    // Boolean
+    let booleanObj = new Boolean(true); // object
+    // Date
+    let today = new Date(); // object
+    // Function
+    function squareX(x) {
+      return x * x
+    }
+    // console.log(typeof squareX); // function
+    // console.log(squareX(4)); // 16
+    // Math
+    let num = Math.round('3.14');
+    // String
+    let text = 'Hello';
+    let textObj = new String('Hello');
     // console.log(typeof text);           // string
-    // console.log(typeof text.length);    // number
     // console.log(typeof textObj);        // object
     // console.log(typeof textObj.length); // number
 
 
-    // Creating an object
-    let funnyGuy = {}; // initializing the object using {}
-    // console.log(typeof funnyGuy); // object
-    // console.log(funnyGuy.toString()); // [object Object]
-    // Create properties:
-    funnyGuy.firstName = "Babe";
-    funnyGuy.middleName= "Herman";
-    funnyGuy.lastName = "Ruth";
-    // Create a method
-    function getName() {
-      return funnyGuy.firstName + ' ' + 
-      funnyGuy.middleName + ' ' + 
-      funnyGuy.lastName
-    }
-    console.log(getName()); // Babe Herman Ruth
-    
-    
-
-    
+    // #--------------------------------------------------------------------------#
+    // 3 WAYS TO DEFINE OBJECT PROPERTIES
+    // let funnyGuy = {};                // object
+    // console.log(typeof funnyGuy);     // object
+    // funnyGuy = {firstName: "Babe"}    // literal notation
+    // funnyGuy.middleName = "Herman";   // dot notation
+    // funnyGuy["lastName"] = "Ruth";    // bracket notation
 
 
+    // #--------------------------------------------------------------------------#
+    // CREATE AN OBJECT METHOD
+    let funnyGuy = {
+      firstName: "Babe", 
+      middleName: "Herman",
+      lastName: "Ruth",
+      lastNameFirst: function() {
+        return this.lastName + ", " +
+        this.firstName
+      } 
+    };
     
+
+    // #--------------------------------------------------------------------------#
+    // CALL THE METHOD
+    console.log(funnyGuy.lastNameFirst()); // Ruth, Babe
+
+
+    // #--------------------------------------------------------------------------#
+    // CREATE PARENT AND CHILD OBJECTS
+    // Parent Objects using "Object.create" and "this"
+    // "this" refers to the object that is executing the current function.
+    // 
+    // let person = {
+    //   getName: function() {
+    //     return this.firstName + ' ' +
+    //     this.middleName + ' ' +
+    //     this.lastName;
+    //   }
+    // }
     
+    // let funnyGal = Object.create(person);
+    // funnyGal.firstName = "Teagan";
+    // funnyGal.lastName = "Presley";
+    
+      
+    // #--------------------------------------------------------------------------#
+    // LOOP OVER AN OBJECT TO RETURN ITS METHODS
+    // for (x in funnyGuy) {
+    //   console.log(x, '=', funnyGuy[x]);
+    // }
+    // // firstName = Babe
+    // // middleName = Herman
+    // // lastName = Ruth
+
+
+
+
+
+
+
   </script>
 </body>
+
 </html>
