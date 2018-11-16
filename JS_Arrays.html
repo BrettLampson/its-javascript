@@ -16,22 +16,41 @@
     // #--------------------------------------------------------------------------#
     // Array Methods
     // #--------------------------------------------------------------------------#
-    let fam = ['Brett', 'Shaina', 'Kayden', 'Oliver']
+    
     
     // #--------------------------------------------------------------------------#
-    // fam.concat()
+    // // fam.concat()
     // let one = ['Thing 1']
     // let two = ['Thing 2']
-    // console.log(one.concat(two)); // ["Thing 1", "Thing 2"]
+    // let three = one.concat(two); 
     // console.log(one); // Thing 1 remains the same
     // console.log(two); // Thing 2 remains the same
+    // console.log(three); // ["Thing 1", "Thing 2"]
         
 
     // #--------------------------------------------------------------------------#
-    // fam.copyWithin()
+    // // fam.copyWithin()
+    // let fam = ['Brett', 'Shaina', 'Kayden', 'Oliver']
+    // // place at position 0 the elements starting at position 2 up to 3
+    // console.log(fam.copyWithin(0, 2, 3));  // ["Kayden", "Shaina", "Kayden", "Oliver"]
+    // // place at position 1 the elements starting at position 2 and above
+    // console.log(fam.copyWithin(1, 2));  // ["Brett", "Kayden", "Oliver", "Oliver"]
 
     // #--------------------------------------------------------------------------#
     // fam.entries()
+    // Returns a new Array Iterator object
+    // that contains the key/value pairs for each index in the array.
+    let fam = ['Brett', 'Shaina', 'Kayden', 'Oliver']
+    let iterator1 = fam.entries();
+    console.log(iterator1.next().value); // [0, "Brett"] notice index if no key present
+    
+    let parents = {'Brett': 40, 'Shaina': 35};
+    console.log(Object.entries(parents)[1]); // ["Shaina", 35]
+
+    let kids = Object.entries(fam).sort((a, b) => a - b);
+    console.log(Object.entries(kids)[1]);
+    // 
+
 
     // #--------------------------------------------------------------------------#
     // fam.every()
