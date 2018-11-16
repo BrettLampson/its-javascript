@@ -42,14 +42,15 @@
     // that contains the key/value pairs for each index in the array.
     let fam = ['Brett', 'Shaina', 'Kayden', 'Oliver']
     let iterator1 = fam.entries();
-    console.log(iterator1.next().value); // [0, "Brett"] notice index if no key present
+    // console.log(iterator1.next().value); // [0, "Brett"] notice index if no key present
     
-    let parents = {'Brett': 40, 'Shaina': 35};
-    console.log(Object.entries(parents)[1]); // ["Shaina", 35]
+    let mom = {'Brett': 40, 'Shaina': 35};
+    console.log(Object.entries(mom)[1]); // ["Shaina", 35]
 
-    let kids = Object.entries(fam).sort((a, b) => a - b);
-    console.log(Object.entries(kids)[1]);
-    // 
+    const parents = ['Brett', 'Shaina']
+    console.log(Object.entries(parents));
+    // [Array(2), Array(2)]
+  
 
 
     // #--------------------------------------------------------------------------#
