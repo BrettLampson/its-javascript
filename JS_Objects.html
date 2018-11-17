@@ -12,6 +12,16 @@
     // #--------------------------------------------------------------------------#
     // Objects
     // #--------------------------------------------------------------------------#
+    // Objects can be seen as mutable key-value-based collections.
+    // An object usually hides its internal state from other objects and prevents
+    // its direct modification.  OOP operates on the idea that the state of an 
+    // object is inherently hidden from the outside world and it can be changed
+    // only via controlled interface operations.
+
+    // 2 principles of good OO Design:
+    // 1) Program to an interface and not to an implementation
+    // 2) Object composition over class inheritance
+
     // A special internal property __proto__ given to all objects.
     // / "Prototype Chain"
     // // Objects have base level "Prototype" properties.  If your object
@@ -19,6 +29,9 @@
     // // the javascript engine will check the next object as determined
     // // by the "prototype" property until the end, which is when you 
     // // try access the "prototype" property on the Object itself.
+    // // The Object.getPrototypeOf() function returns the prototype of an object.
+    
+
 
     // A primitive value is a value that has no properties or methods.
     // A primitive data type is data that has a primitive value.
@@ -36,10 +49,12 @@
 // #--------------------------------------------------------------------------#
     // CREATE AN OBJECT... an object literal in this case
     let thingObj = {}; // object
+    // -OR-
     // Create an Object using "new" keyword followed by the Object Type
-    // Array
-    let fam = ['Brett', 'Shaina', 'Kayden', 'Oliver']; // object
+    // Array Example
     let alsoFam = new Array('Brett', 'Shaina'); // object using constructor function
+    let fam = ['Brett', 'Shaina', 'Kayden', 'Oliver']; // object
+
     // Boolean
     let booleanObj = new Boolean(true); // object
     // Date
