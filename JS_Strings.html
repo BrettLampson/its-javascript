@@ -54,7 +54,8 @@
     
     // #--------------------------------------------------------------------------#
     // // str.charAt()
-    // console.log(text.charAt('hello'));
+    // console.log(text.charAt(14)); 
+    // // w
     
     // #--------------------------------------------------------------------------#
     // str.charCodeAt()
@@ -64,32 +65,40 @@
     
     // #--------------------------------------------------------------------------#
     // // str.codePointAt()
-    // console.log(text.codePointAt
+    // console.log(text.codePointAt(21)); 
+    // // 108
+    
     
     // #--------------------------------------------------------------------------#
     // // str.concat()
-    // console.log(text.concat(' ', 'Thanks!'));
+    // let tty = text.concat(' ', 'Thanks!');
+    // console.log(tty); // Please locate where 'locate' occurs Thanks!
     // // concat() joins two or more strings:
     
     // #--------------------------------------------------------------------------#
     // // str.endsWith()
-    // console.log(text.endsWith
+    // console.log(tty.endsWith('Thanks!')); 
+    // // true
     
     // #--------------------------------------------------------------------------#
     // // str.fixed()
-    // console.log(text.fixed
-    
+    // console.log(text.fixed());
+    // // <tt>Please locate where 'locate' occurs</tt>
+
     // #--------------------------------------------------------------------------#
     // // str.fontcolor()
-    // console.log(text.fontcolor
+    // console.log(text.fontcolor('green'));
+    // // <font color="green">Please locate where 'locate' occurs</font>
     
     // #--------------------------------------------------------------------------#
-    // // str.fontsize()
-    // console.log(text.fontsize
+    // // // str.fontsize()
+    // console.log(text.fontsize(24));
+    // // <font size="24">Please locate where 'locate' occurs</font>
     
     // #--------------------------------------------------------------------------#
     // // str.includes()
-    // console.log(text.includes
+    // console.log(text.includes('z')); 
+    // // false
 
     // #--------------------------------------------------------------------------#
     // // str.indexof()
@@ -110,6 +119,7 @@
     // #--------------------------------------------------------------------------#
     // // str.lastIndexOf()
     // console.log(text.lastIndexOf('locate'));
+    // // 21
 
     // #--------------------------------------------------------------------------#
     // // str.length()
@@ -117,12 +127,17 @@
     // // 35
 
     // #--------------------------------------------------------------------------#
-    // // str.link()
-    // console.log(text.link
+    // str.link()
+    // <p id="portfolio"></p>
+    // function myFunction() {
+    // var str = "My Portfolio Here";
+    // var result = str.link("https://www.brettlampson.com");
+    // document.getElementById("demo").innerHTML = result;
+    // }
 
     // #--------------------------------------------------------------------------#
     // // str.localeCompare()
-    // console.log(text.localeCompare
+    // 
     
     // #--------------------------------------------------------------------------#
     // // str.match()
@@ -132,11 +147,12 @@
     
     // #--------------------------------------------------------------------------#
     // // str.normalize()
-    // console.log(text.normalize
+    // 
     
     // #--------------------------------------------------------------------------#
     // // str.repeat()
-    // console.log(text.repeat
+    // console.log('-'.repeat(30));
+    // // ------------------------------
     
     // #--------------------------------------------------------------------------#
     // // replace('current', 'new')
@@ -166,15 +182,19 @@
     
     // #--------------------------------------------------------------------------#
     // // str.startsWith()
-    // console.log(text.startsWith
+    // console.log('Hello World'.startsWith('Hello')); 
+    // // true
     
     // #--------------------------------------------------------------------------#
     // // str.strike()
-    // console.log(text.strike
+    // console.log('Hello World'.strike());
+    // // <strike>Hello World</strike>
     
     // #--------------------------------------------------------------------------#
     // // str.sub()
-    // console.log(text.sub
+    // The sub() method is used to display a string as subscript text.
+    // console.log(text.sub());
+    // // <sub>Please locate where 'locate' occurs</sub>
     
     // #--------------------------------------------------------------------------#
     // // str.substr([start], [length])
@@ -191,11 +211,15 @@
     
     // #--------------------------------------------------------------------------#
     // // str.sup()
-    // console.log(text.sup
+    // console.log(text.sup());
+    // // <sup>Please locate where 'locate' occurs</sup>
     
     // #--------------------------------------------------------------------------#
     // // str.toLocaleLowerCase()
-    // console.log(text.toLocaleLowerCase
+    // Returns the calling string value converted to lower case, 
+    // according to any locale-specific case mappings.
+    // console.log(text.toLocaleLowerCase());
+    // // please locate where 'locate' occurs
     
     // #--------------------------------------------------------------------------#
     // // str.toLocaleUpperCase()
