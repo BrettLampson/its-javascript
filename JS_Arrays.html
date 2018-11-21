@@ -14,15 +14,14 @@
     // IMPORTANT
 
     // #--------------------------------------------------------------------------#
+    // #--------------------------------------------------------------------------#
     // Array Methods
     // #--------------------------------------------------------------------------#
-    
-    
     // #--------------------------------------------------------------------------#
     // // fam.concat()
-    // let one = ['Thing 1']
-    // let two = ['Thing 2']
-    // let three = one.concat(two); 
+    let one = ['Thing 1'];
+    let two = ['Thing 2'];
+    let three = one.concat(two); 
     // console.log(one); // Thing 1 remains the same
     // console.log(two); // Thing 2 remains the same
     // console.log(three); // ["Thing 1", "Thing 2"]
@@ -30,7 +29,7 @@
 
     // #--------------------------------------------------------------------------#
     // // fam.copyWithin()
-    // let fam = ['Brett', 'Shaina', 'Kayden', 'Oliver']
+    let fam = ['Brett', 'Shaina', 'Kayden', 'Oliver'];
     // // place at position 0 the elements starting at position 2 up to 3
     // console.log(fam.copyWithin(0, 2, 3));  // ["Kayden", "Shaina", "Kayden", "Oliver"]
     // // place at position 1 the elements starting at position 2 and above
@@ -40,18 +39,17 @@
     // fam.entries()
     // Returns a new Array Iterator object
     // that contains the key/value pairs for each index in the array.
-    let fam = ['Brett', 'Shaina', 'Kayden', 'Oliver']
+    let fam = ['Brett', 'Shaina', 'Kayden', 'Oliver'];
     let iterator1 = fam.entries();
     // console.log(iterator1.next().value); // [0, "Brett"] notice index if no key present
     
     let mom = {'Brett': 40, 'Shaina': 35};
-    console.log(Object.entries(mom)[1]); // ["Shaina", 35]
+    // console.log(Object.entries(mom)[1]); // ["Shaina", 35]
 
     const parents = ['Brett', 'Shaina']
-    console.log(Object.entries(parents));
+    // console.log(Object.entries(parents));
     // [Array(2), Array(2)]
   
-
 
     // #--------------------------------------------------------------------------#
     // fam.every()
@@ -73,7 +71,7 @@
 
     // #--------------------------------------------------------------------------#
     // fam.indexOf()
-    // let nums = ['one', 'two', 'three'];
+    let nums = ['one', 'two', 'three'];
     // console.log(nums.indexOf('two', 0)); // look for 'two' start at index 0
     // // 1
     
@@ -95,10 +93,11 @@
 
     // #--------------------------------------------------------------------------#
     // fam.pop()
-    // let lastItem = fam.pop(); // Removes last item in array and stores it
+    let lastItem = fam.pop(); // Removes last item in array and stores it
     // console.log(lastItem); // Oliver
     // console.log(typeof lastItem); // String
     // console.log(fam); // ["Brett", "Shaina", "Kayden"]
+
 
     // #--------------------------------------------------------------------------#
     // fam.push()
@@ -116,20 +115,20 @@
 
     // #--------------------------------------------------------------------------#
     // fam.shift()
-    // let firstItem = fam.shift(); // Removes 1st item in array and stores it
+    let firstItem = fam.shift(); // Removes 1st item in array and stores it
     // console.log(firstItem); // Brett
     // console.log(typeof firstItem); // String
     // console.log(fam); // ["Shaina", "Kayden", "Oliver"]
 
+
     // #--------------------------------------------------------------------------#
     // fam.slice()
-    // let fam2 = ['Brett', 'Shaina', 'Kayden', 'Oliver']
+    let fam2 = ['Brett', 'Shaina', 'Kayden', 'Oliver']
     // console.log(fam2.indexOf('Oliver')); // 3
     // console.log(fam2.length); // 4
-    // let kids = fam.slice(2, 4); // include 2, don't include 4
+    let kids = fam.slice(2, 4); // include 2, don't include 4
     // console.log(kids); // ["Kayden", "Oliver"]
-    
-    
+
 
     // #--------------------------------------------------------------------------#
     // fam.some()
@@ -151,10 +150,15 @@
     // console.log(fam.unshift('Elsa')); // 5
     // console.log(fam); // ["Elsa", "Brett", "Shaina", "Kayden", "Oliver"]
 
+
     // #--------------------------------------------------------------------------#
     // fam.values()
 
-
+    // #--------------------------------------------------------------------------#
+    // #--------------------------------------------------------------------------#
+    // Array Methods End
+    // #--------------------------------------------------------------------------#
+    // #--------------------------------------------------------------------------#
 
 
 
