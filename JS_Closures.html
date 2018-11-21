@@ -13,13 +13,13 @@
     // Cosures
     // #--------------------------------------------------------------------------#
 
-    // function youSayGoodbye() {
-    //   console.log('Outer Function');
-    //   function andISayHello() {
-    //     console.log("Inner Function");
-    //   }
-    //   return andISayHello;
-    // }
+    function youSayGoodbye() {
+      console.log('Outer Function');
+      function andISayHello() {
+        console.log("Inner Function");
+      }
+      return andISayHello;
+    }
     // youSayGoodbye(); // 'Outer Function'
     // let something = youSayGoodbye();
     //To call this function, initilize a variable that points to youSayGoodbye().
@@ -29,14 +29,14 @@
     // something(); //'Inner'
 
 
-    // function outerFunc() {
-    //   let message = 'Hello from the inner function'
-    //   function innerFunc() {
-    //     console.log(message)
-    //   }
-    //   return innerFunc;
-    // }
-    // let myFunc = outerFunc();
+    function outerFunc() {
+      let message = 'Hello from the inner function'
+      function innerFunc() {
+        console.log(message)
+      }
+      return innerFunc;
+    }
+    let myFunc = outerFunc();
     // console.log(myFunc.name);
     // myFunc();
 
