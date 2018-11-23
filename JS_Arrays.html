@@ -18,18 +18,21 @@
     // Array Methods
     // #--------------------------------------------------------------------------#
     // #--------------------------------------------------------------------------#
-    // // fam.concat()
-    let one = ['Thing 1'];
-    let two = ['Thing 2'];
-    let three = one.concat(two); 
+
+    let fam = ['Brett', 'Shaina', 'Kayden', 'Oliver'];
+
+    // #--------------------------------------------------------------------------#
+    // fam.concat()
+    // let one = ['Thing 1'];
+    // let two = ['Thing 2'];
+    // let three = one.concat(two); 
     // console.log(one); // Thing 1 remains the same
     // console.log(two); // Thing 2 remains the same
     // console.log(three); // ["Thing 1", "Thing 2"]
         
 
     // #--------------------------------------------------------------------------#
-    // // fam.copyWithin()
-    let fam = ['Brett', 'Shaina', 'Kayden', 'Oliver'];
+    // fam.copyWithin()s
     // // place at position 0 the elements starting at position 2 up to 3
     // console.log(fam.copyWithin(0, 2, 3));  // ["Kayden", "Shaina", "Kayden", "Oliver"]
     // // place at position 1 the elements starting at position 2 and above
@@ -39,14 +42,13 @@
     // fam.entries()
     // Returns a new Array Iterator object
     // that contains the key/value pairs for each index in the array.
-    let fam = ['Brett', 'Shaina', 'Kayden', 'Oliver'];
-    let iterator1 = fam.entries();
+    // let iterator1 = fam.entries();
     // console.log(iterator1.next().value); // [0, "Brett"] notice index if no key present
     
-    let mom = {'Brett': 40, 'Shaina': 35};
+    // let mom = {'Brett': 40, 'Shaina': 35};
     // console.log(Object.entries(mom)[1]); // ["Shaina", 35]
 
-    const parents = ['Brett', 'Shaina']
+    // const parents = ['Brett', 'Shaina']
     // console.log(Object.entries(parents));
     // [Array(2), Array(2)]
   
@@ -71,19 +73,25 @@
 
     // #--------------------------------------------------------------------------#
     // fam.indexOf()
-    let nums = ['one', 'two', 'three'];
-    // console.log(nums.indexOf('two', 0)); // look for 'two' start at index 0
-    // // 1
+    // let nums = ['one', 'two', 'three'];
+    // look for 'two' start at index 0
+    // console.log(nums.indexOf('two', 0)); // 1
     
 
     // #--------------------------------------------------------------------------#
     // fam.join()
+    // let fam = ['Brett', 'Shaina', 'Kayden', 'Oliver'];
+    // console.log(fam.join('-')); // Brett-Shaina-Kayden-Oliver
+
 
     // #--------------------------------------------------------------------------#
     // fam.keys()
 
     // #--------------------------------------------------------------------------#
     // fam.lastIndexOf()
+    // let fam = ['Brett', 'Shaina', 'Kayden', 'Oliver'];
+    // console.log(fam.lastIndexOf('Kayden'));
+    
 
     // #--------------------------------------------------------------------------#
     // fam.length()
@@ -93,51 +101,68 @@
 
     // #--------------------------------------------------------------------------#
     // fam.pop()
-    let lastItem = fam.pop(); // Removes last item in array and stores it
+    // let lastItem = fam.pop(); // Removes last item in array and stores it
     // console.log(lastItem); // Oliver
     // console.log(typeof lastItem); // String
     // console.log(fam); // ["Brett", "Shaina", "Kayden"]
 
 
     // #--------------------------------------------------------------------------#
-    // fam.push()
+    // // fam.push()
+    // let fam = ['Brett', 'Shaina', 'Kayden', 'Oliver'];
     // console.log(fam.push('Elsa')); // 5
-    // console.log(fam); // ["Brett", "Shaina", "Kayden", "Oliver", "Elsa"]
+    // console.log(fam); 
+    // // ["Brett", "Shaina", "Kayden", "Oliver", "Elsa"]
+
 
     // #--------------------------------------------------------------------------#
     // fam.reduce()
 
+
     // #--------------------------------------------------------------------------#
     // fam.reduceRight()
 
+
     // #--------------------------------------------------------------------------#
-    // fam.reverse()
+    // // fam.reverse()
+    // let fam = ['Brett', 'Shaina', 'Kayden', 'Oliver'];
+    // console.log(fam.reverse()); 
+    // // ["Oliver", "Kayden", "Shaina", "Brett"]
+    
 
     // #--------------------------------------------------------------------------#
     // fam.shift()
-    let firstItem = fam.shift(); // Removes 1st item in array and stores it
+    // let firstItem = fam.shift(); // Removes 1st item in array and stores it
     // console.log(firstItem); // Brett
     // console.log(typeof firstItem); // String
     // console.log(fam); // ["Shaina", "Kayden", "Oliver"]
 
 
     // #--------------------------------------------------------------------------#
-    // fam.slice()
-    let fam2 = ['Brett', 'Shaina', 'Kayden', 'Oliver']
-    // console.log(fam2.indexOf('Oliver')); // 3
-    // console.log(fam2.length); // 4
-    let kids = fam.slice(2, 4); // include 2, don't include 4
-    // console.log(kids); // ["Kayden", "Oliver"]
+    // // fam.slice()
+    // let fam2 = ['Brett', 'Shaina', 'Kayden', 'Oliver'];
+    // console.log(fam2.length);       // 4
+    // let parents = fam2.slice(0, 2)  // include 0, 1, NOT index 2+
+    // console.log(parents);           // ["Brett", "Shaina"]
+    // let kids = fam2.slice(2, 4);    // include 2, 3, NOT index 4+
+    // console.log(kids);              // ["Kayden", "Oliver"]
 
 
     // #--------------------------------------------------------------------------#
     // fam.some()
 
+
     // #--------------------------------------------------------------------------#
-    // fam.sort()
+    // // fam.sort()
+    // // (sorts ascii character order)
+    // let things = ['A', 'a', 0, '0', '!'];
+    // console.log(things.sort());
+    // // ["!", 0, "0", "A", "a"]
+    
 
     // #--------------------------------------------------------------------------#
     // fam.splice()
+    
 
     // #--------------------------------------------------------------------------#
     // fam.toLocaleString()
