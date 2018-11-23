@@ -13,10 +13,17 @@
     // #--------------------------------------------------------------------------#
 
     // 3 types of declarations:
-    // "var" declares a function blocked variable, optionally initializing it to a value
-    // "let" declares a block scoped, local variable, optionally initializing it to a value
-    // "const" declares a block scoped, read-only named constant.
-    
+    // "var" declares a function blocked variable, optionally initializing it to a value.
+    // Can be reassigned but only accessed within a function.  Variables defined with var
+    // move to the top when code is executed.
+
+    // "const" declares a block scoped variable. CAN NOT be reassigned or
+    // accessible before they appear within the code.
+
+    // "let" similar to const, however it can be reassigned but not redeclared.
+    // declares a block scoped, local variable, optionally initializing it to a value.
+
+
     // 3 examples:
     var num = 40;
     let name = 'Oliver'
