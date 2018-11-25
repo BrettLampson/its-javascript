@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Arrays</title>
 </head>
+
 <body>
-<script>
+  <script>
     'use strict';
     // #--------------------------------------------------------------------------#
     // Arrays
     // #--------------------------------------------------------------------------#
-    
+
     // IMPORTANT
 
     // #--------------------------------------------------------------------------#
@@ -19,24 +21,30 @@
     // #--------------------------------------------------------------------------#
     // #--------------------------------------------------------------------------#
 
-    let fam = ['Brett', 'Shaina', 'Kayden', 'Oliver'];
+    let fam = ['Brett', 'Shaina', 'Kayden', 'Oliver'];  // used throughout file
 
     // #--------------------------------------------------------------------------#
     // fam.concat()
+    // Used to merge two or more arrays.
     // let one = ['Thing 1'];
     // let two = ['Thing 2'];
     // let three = one.concat(two); 
     // console.log(one); // Thing 1 remains the same
     // console.log(two); // Thing 2 remains the same
     // console.log(three); // ["Thing 1", "Thing 2"]
-        
+
 
     // #--------------------------------------------------------------------------#
-    // fam.copyWithin()s
-    // // place at position 0 the elements starting at position 2 up to 3
+    // fam.copyWithin()
+    // Shallow copies part of an array to another location in the same array 
+    // and returns it, without modifying its size.
+
+    // place at position 0 the elements starting at position 2 up to 3
     // console.log(fam.copyWithin(0, 2, 3));  // ["Kayden", "Shaina", "Kayden", "Oliver"]
-    // // place at position 1 the elements starting at position 2 and above
+
+    // place at position 1 the elements starting at position 2 and above
     // console.log(fam.copyWithin(1, 2));  // ["Brett", "Kayden", "Oliver", "Oliver"]
+
 
     // #--------------------------------------------------------------------------#
     // fam.entries()
@@ -44,39 +52,103 @@
     // that contains the key/value pairs for each index in the array.
     // let iterator1 = fam.entries();
     // console.log(iterator1.next().value); // [0, "Brett"] notice index if no key present
-    
+
     // let mom = {'Brett': 40, 'Shaina': 35};
     // console.log(Object.entries(mom)[1]); // ["Shaina", 35]
 
     // const parents = ['Brett', 'Shaina']
     // console.log(Object.entries(parents));
     // [Array(2), Array(2)]
-  
+
 
     // #--------------------------------------------------------------------------#
     // fam.every()
+    // Tests whether all elements in the array pass the test of the provided function.
+    // function isBelowThreshold(currentValue) {
+    //   return currentValue < 40;  
+    // }
+    // var array1 = [1, 30, 39, 29, 10, 13];
+    // console.log(array1.every(isBelowThreshold));
+
 
     // #--------------------------------------------------------------------------#
     // fam.fill()
+    // var array1 = [1, 2, 3, 4];
+
+    // // fill with 0 from position 2 until position 4
+    // console.log(array1.fill(0, 2, 4));
+    // // expected output: [1, 2, 0, 0]
+
+    // // fill with 5 from position 1
+    // console.log(array1.fill(5, 1));
+    // // expected output: [1, 5, 5, 5]
+
+    // console.log(array1.fill(6));
+    // // expected output: [6, 6, 6, 6]
+
 
     // #--------------------------------------------------------------------------#
     // fam.filter()
-    
+    // var words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+
+    // const result = words.filter(word => word.length > 6);
+
+    // console.log(result);
+    // // expected output: Array ["exuberant", "destruction", "present"]
+
+
     // #--------------------------------------------------------------------------#
     // fam.find()
+    // Returns the value of the first element in the array that satisfies the 
+    // provided testing function. Otherwise undefined is returned.
+
+    // var array1 = [5, 12, 8, 130, 44];
+
+    // var found = array1.find(function (element) {
+    //   return element > 10;
+    // });
+
+    // console.log(found);
+    // // expected output: 12
+
 
     // #--------------------------------------------------------------------------#
     // fam.findIndex()
+    // Returns the index of the first element in the array that satisfies the 
+    // provided testing function. 
+    // Otherwise, it returns -1, indicating no element passed the test.
+
+    // var array1 = [5, 12, 8, 130, 44];
+
+    // function findFirstLargeNumber(element) {
+    //   return element > 13;
+    // }
+
+    // console.log(array1.findIndex(findFirstLargeNumber));
+    // // expected output: 3
+
 
     // #--------------------------------------------------------------------------#
     // fam.forEach()
+    // Executes a provided function once for each array element.
+
+    // var array1 = ['a', 'b', 'c'];
+
+    // array1.forEach(function (element) {
+    //   console.log(element);
+    // });
+
+    // expected output: "a"
+    // expected output: "b"
+    // expected output: "c"
+
 
     // #--------------------------------------------------------------------------#
     // fam.indexOf()
     // let nums = ['one', 'two', 'three'];
     // look for 'two' start at index 0
     // console.log(nums.indexOf('two', 0)); // 1
-    
+
 
     // #--------------------------------------------------------------------------#
     // fam.join()
@@ -86,18 +158,36 @@
 
     // #--------------------------------------------------------------------------#
     // fam.keys()
+    // Returns a new Array Iterator object that contains the keys for 
+    // each index in the array.
+
+    // var array1 = ['a', 'b', 'c'];
+    // var iterator = array1.keys();
+
+    // for (let key of iterator) {
+    //   console.log(key); // expected output: 0 1 2
+    // }
+
 
     // #--------------------------------------------------------------------------#
     // fam.lastIndexOf()
     // let fam = ['Brett', 'Shaina', 'Kayden', 'Oliver'];
     // console.log(fam.lastIndexOf('Kayden'));
-    
 
-    // #--------------------------------------------------------------------------#
-    // fam.length()
 
     // #--------------------------------------------------------------------------#
     // fam.map()
+    // Creates a new array with the results of calling a provided function on 
+    // every element in the calling array.
+
+    // var array1 = [1, 4, 9, 16];
+
+    // pass a function to map
+    // // const map1 = array1.map(x => x * 2);
+
+    // console.log(map1);
+    // // expected output: Array[2, 8, 18, 32]
+
 
     // #--------------------------------------------------------------------------#
     // fam.pop()
@@ -117,10 +207,32 @@
 
     // #--------------------------------------------------------------------------#
     // fam.reduce()
+    // Executes a reducer function (that you provide) on each member of the 
+    // array resulting in a single output value.
+
+    // const array1 = [1, 2, 3, 4];
+    // const reducer = (accumulator, currentValue) => accumulator + currentValue;
+
+    // // 1 + 2 + 3 + 4
+    // console.log(array1.reduce(reducer));
+    // // expected output: 10
+
+    // // 5 + 1 + 2 + 3 + 4
+    // console.log(array1.reduce(reducer, 5));
+    // // expected output: 15
 
 
     // #--------------------------------------------------------------------------#
     // fam.reduceRight()
+    // Applies a function against an accumulator and each value of the 
+    // array (from right-to-left) to reduce it to a single value.
+
+    // const array1 = [[0, 1], [2, 3], [4, 5]].reduceRight(
+    //   (accumulator, currentValue) => accumulator.concat(currentValue)
+    // );
+
+    // console.log(array1);
+    // // expected output: Array [4, 5, 2, 3, 0, 1]
 
 
     // #--------------------------------------------------------------------------#
@@ -128,7 +240,7 @@
     // let fam = ['Brett', 'Shaina', 'Kayden', 'Oliver'];
     // console.log(fam.reverse()); 
     // // ["Oliver", "Kayden", "Shaina", "Brett"]
-    
+
 
     // #--------------------------------------------------------------------------#
     // fam.shift()
@@ -150,6 +262,18 @@
 
     // #--------------------------------------------------------------------------#
     // fam.some()
+    // Tests whether at least one element in the array passes the test 
+    // implemented by the provided function.
+
+    // var array = [1, 2, 3, 4, 5];
+
+    // var even = function (element) {
+    //   // checks whether an element is even
+    //   return element % 2 === 0;
+    // };
+
+    // console.log(array.some(even));
+    // // expected output: true
 
 
     // #--------------------------------------------------------------------------#
@@ -158,17 +282,54 @@
     // let things = ['A', 'a', 0, '0', '!'];
     // console.log(things.sort());
     // // ["!", 0, "0", "A", "a"]
-    
+
 
     // #--------------------------------------------------------------------------#
     // fam.splice()
-    
+    // Changes the contents of an array by removing existing elements 
+    // and / or adding new elements.
+
+    // var months = ['Jan', 'March', 'April', 'June'];
+    // months.splice(1, 0, 'Feb');
+    // // inserts at 1st index position
+    // console.log(months);
+    // // expected output: Array ['Jan', 'Feb', 'March', 'April', 'June']
+
+    // months.splice(4, 1, 'May');
+    // // replaces 1 element at 4th index
+    // console.log(months);
+    // // expected output: Array ['Jan', 'Feb', 'March', 'April', 'May']
+
 
     // #--------------------------------------------------------------------------#
     // fam.toLocaleString()
+    // Returns a string representing the elements of the array. The elements are 
+    // converted to Strings using their toLocaleString methods and these Strings are 
+    // separated by a locale-specific String (such as a comma “,”).
+
+    // var array1 = [1, 'a', new Date('21 Dec 1997 14:12:00 UTC')];
+    // var localeString = array1.toLocaleString('en', { timeZone: "UTC" });
+
+    // console.log(localeString);
+    // // expected output: "1,a,12/21/1997, 2:12:00 PM",
+    // // This assumes "en" locale and UTC timezone - your results may vary
+
+
+    // #--------------------------------------------------------------------------#
+    // fam.toSource()
+    // DO NOT use in production sites, it may not work for every user.
+    // Returns a string representing the source code of the array.
+
 
     // #--------------------------------------------------------------------------#
     // fam.toString()
+    // Returns a string representing the specified array and its elements.
+
+    // var array1 = [1, 2, 'a', '1a'];
+
+    // console.log(array1.toString());
+    // // expected output: "1,2,a,1a"
+
 
     // #--------------------------------------------------------------------------#
     // fam.unshift()
@@ -178,6 +339,16 @@
 
     // #--------------------------------------------------------------------------#
     // fam.values()
+    // Returns a new Array Iterator object that contains the values 
+    // for each index in the array.
+
+    // const array1 = ['a', 'b', 'c'];
+    // const iterator = array1.values();
+
+    // for (const value of iterator) {
+    //   console.log(value); 
+    // }
+    // // expected output: "a" "b" "c"
 
     // #--------------------------------------------------------------------------#
     // #--------------------------------------------------------------------------#
@@ -189,4 +360,5 @@
 
   </script>
 </body>
+
 </html>
