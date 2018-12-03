@@ -56,21 +56,21 @@
     // blockscoping();
 
 
-    // "Variable Hoisting"
-    // When javascript encourters a function, one of the first
-    // things it does is scan the full body of code for any
-    // declared variables, then initializes them by default
-    // with a value of "undefined". Because the function
-    // sees foo before its properly defined.
-    let foo = 'Hello';
-    function doSomethingClever() {
-      console.log(foo);
-      let foo = 'Good Bye';
-      console.log(foo);
-    }
-    doSomethingClever();
-    //undefined
-    //'Good bye'
+    // // "Variable Hoisting"
+    // // When javascript encourters a function, one of the first
+    // // things it does is scan the full body of code for any
+    // // declared variables, then initializes them by default
+    // // with a value of "undefined". Because the function
+    // // sees foo before its properly defined.
+    // let foo = 'Hello';
+    // function doSomethingClever() {
+    //   console.log(foo);
+    //   let foo = 'Good Bye';
+    //   console.log(foo);
+    // }
+    // doSomethingClever();
+    // //undefined
+    // //'Good bye'
 
 
 
