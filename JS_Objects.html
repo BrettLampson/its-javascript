@@ -34,46 +34,61 @@
 
 
     // A primitive value is a value that has no properties or methods.
-    // A primitive data type is data that has a primitive value.
+    // However, temporarily the primitive becomes an object when evaluating
+    // properties like text.toUpperCase(); but then goes back to primitive.
+    // Why not keep them as objects?  Memory cost!  Objects have more baggage.
+
+    // This temporary transformation only happens for Javascript primitives.
     // Objects in Javascript that also exist as primitives:
-    // Array
-    // Boolean
-    // Date
-    // Function
-    // Math
-    // Number
-    // RegExp
-    // String
+    // Array    - store, retrieve and manipulate a collection of data
+    // Boolean  - acts as a wrapper around the boolean primitive
+    // Date     - easily represent and work with dates
+    // Function - invoke some code
+    // Math     - helps you better work with numbers
+    // Number   - acts as a wrapper around a number primitive 
+    // RegExp   - lots of functionality for matching text patterns
+    // String   - acts as a wrapper around the string primitive
 
 
 // #--------------------------------------------------------------------------#
     // CREATE AN OBJECT... an object literal in this case
-    let thingObj = {}; // object
+    // let thingObj = {}; // object
     // -OR-
     // Create an Object using "new" keyword followed by the Object Type
-    // Array Example
-    let alsoFam = new Array('Brett', 'Shaina'); // object using constructor function
-    let fam = ['Brett', 'Shaina', 'Kayden', 'Oliver']; // object
+
+    // Array
+    // object using constructor function
+    // let alsoFam = new Array('Brett', 'Shaina');
+    
+    // object
+    // let fam = ['Brett', 'Shaina', 'Kayden', 'Oliver']; 
 
     // Boolean
-    let booleanObj = new Boolean(true); // object
+    // let booleanObj = new Boolean(true); // object
+
     // Date
-    let today = new Date(); // object
+    // let today = new Date(); // object
+
     // Function
-    function squareX(x) {
-      return x * x
-    }
+    // function squareX(x) {
+    //   return x * x
+    // }
     // console.log(typeof squareX); // function
     // console.log(squareX(4)); // 16
-    // Math
-    let num = Math.round('3.14');
-    // String
-    let text = 'Hello';
-    let textObj = new String('Hello');
-    // console.log(typeof text);           // string
-    // console.log(typeof textObj);        // object
-    // console.log(typeof textObj.length); // number
 
+    // Math
+    // let num = Math.round('3.14');
+
+    // Number
+    // let num = 13;
+    // console.log(typeof num); // number
+    
+    // String
+    // let text = 'Hello';                 // string literal
+    // console.log(typeof text);           // string 
+    // let textObj = new String('Hello');  // object (more memory overhead)
+    // console.log(typeof textObj);        // object
+    
 
     // #--------------------------------------------------------------------------#
     // 3 WAYS TO DEFINE OBJECT PROPERTIES
@@ -86,20 +101,20 @@
 
     // #--------------------------------------------------------------------------#
     // CREATE AN OBJECT METHOD
-    let funnyGuy = {
-      firstName: "Babe", 
-      middleName: "Herman",
-      lastName: "Ruth",
-      lastNameFirst: function() {
-        return this.lastName + ", " +
-        this.firstName
-      } 
-    };
+    // let funnyGuy = {
+    //   firstName: "Babe", 
+    //   middleName: "Herman",
+    //   lastName: "Ruth",
+    //   lastNameFirst: function() {
+    //     return this.lastName + ", " +
+    //     this.firstName
+    //   } 
+    // };
     
 
     // #--------------------------------------------------------------------------#
     // CALL THE METHOD
-    console.log(funnyGuy.lastNameFirst()); // Ruth, Babe
+    // console.log(funnyGuy.lastNameFirst()); // Ruth, Babe
 
 
     // #--------------------------------------------------------------------------#
