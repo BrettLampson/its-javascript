@@ -21,7 +21,7 @@
     // #--------------------------------------------------------------------------#
     // #--------------------------------------------------------------------------#
 
-    // let fam = ['Brett', 'Shaina', 'Kayden', 'Oliver'];  // used throughout file
+    let fam = ['Brett', 'Shaina', 'Kayden', 'Oliver'];  // used throughout file
 
     // #--------------------------------------------------------------------------#
     // fam.concat()
@@ -365,6 +365,33 @@
     // #--------------------------------------------------------------------------#
     // #--------------------------------------------------------------------------#
 
+
+    // #--------------------------------------------------------------------------#
+    // // Creating Arrays
+    var groceryList = []; // array literal
+
+
+    // #--------------------------------------------------------------------------#
+    // // Add items to an empty Array
+    groceryList.push('Milk');
+    groceryList.push('Eggs', 'Bacon');
+    console.log(groceryList); // ["Milk", "Eggs", "Bacon"]
+    
+    // #--------------------------------------------------------------------------#
+    // // Add items to beginning of Array
+    groceryList.unshift('Cheese') 
+    console.log(groceryList); // ["Cheese", "Milk", "Eggs", "Bacon"]
+
+    // #--------------------------------------------------------------------------#
+    // // Iterate over an 
+    for (var i = 0; i < groceryList.length; i++) {
+      console.log(groceryList[i]);
+    }
+    // Cheese
+    // Milk
+    // Eggs
+    // Bacon
+    
 
 
   </script>
