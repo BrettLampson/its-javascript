@@ -12,20 +12,28 @@
     // #--------------------------------------------------------------------------#
     
 
+    // PROPERTIES
+    // document.activeElement()
+    // document.activeElement()
+    // document.activeElement()
+    // document.activeElement()
+
+
     // Node Properties
     // attributes  - Returns a live collection of all atrributes registered to an element
     // baseURI     - Provides the absolute base URL of an HTML element
     // childNodes  - Gives a collection of an elements child nodes
     // firstChild  - Returns the first child node of an element
     // lastChild   - Returns the last child node of an element
-    // nextSibling - Gives you the next node at the same node tree level
-    // nodeName    - Returns the name of a node
-    // nodeType - Returns the type of a node 
-    // nodeValue - Sets or returns the value of a node
-    // ownerDocument - The top-level document object for this node
-    // parentNode - Returns the parent node of an element
-    // previousSibling - Returns the node immediately preceding the current one 
-    // textContent - Sets or returns the textual content of a node and its decendants
+    // nextSibling - Gives you the next node at the same node tree level and stores it as an object
+    // nodeName    - Returns the name of a node (either element name of #textNode)
+    // nodeType    - Returns the type of a node (1=element, 3=text)
+    // nodeValue   - Sets or returns the value of a node (the text content in the case of text nodes)
+    // ownerDocument   - The top-level document object for this node
+    // parentNode      - Returns the parent node of an element
+    // previousSibling - Returns the node immediately preceding the current one and stores it as an object
+    // textContent     - Sets or returns the textual content of a node and its decendants
+
 
     // // Node Methods
     // appendChild() - 
@@ -45,8 +53,11 @@
     // removeChild() -
     // replaceChild() -
     
+
+    // // Reading element attributes node values and other data
     // // Element Methods
-    // getAttribute() -
+    // getAttribute('attribute') - Retrieves the value of the attribute 
+    // with the name 'attribute'
     // getAttributeNS() -
     // getAttributeNode() -
     // getAttributeNodeNS() -
@@ -55,11 +66,23 @@
     // removeAttribute() -
     // removeAttributeNS() -
     // removeAttributeNode() -
-    // setAttribute() -
+    // setAttribute('attribute', 'value') - Sets the value of the attribute with 
+    // the name 'attribute' to 'value'
     // setAttributeNS() -
     // setAttributeNode() -
     // setAttributeNodeNS() -
-    
+
+
+    // // HTML METHODS
+    // document.getElementById('id').innerHTML = 'HELLO JAVASCRIPT' 
+    // Retrieves the element with the given id as an object, THEN changes the
+    // element content (innerHTML) to 'HELLO JAVASCRIPT'
+
+
+    // document.getElementByTagName('tagname')
+    // Retrieves all elements with the tag name tagname and stores them in an arraylike list
+
+
     // // Window Properties
     // closed Checks whether a window has been close or not and returns true or false
     // defaultStatus -
@@ -86,6 +109,7 @@
     // self -
     // status -
     // top -
+
 
   </script>
 </body>
