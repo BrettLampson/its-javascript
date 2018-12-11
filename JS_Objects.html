@@ -31,8 +31,6 @@
     // // try access the "prototype" property on the Object itself.
     // // The Object.getPrototypeOf() function returns the prototype of an object.
     
-
-
     // A primitive value is a value that has no properties or methods.
     // However, temporarily the primitive becomes an object when evaluating
     // properties like text.toUpperCase(); but then goes back to primitive.
@@ -50,15 +48,55 @@
     // String   - acts as a wrapper around the string primitive
 
 
-// #--------------------------------------------------------------------------#
+    // #--------------------------------------------------------------------------#
     // CREATE AN OBJECT
-    // let thingObj = {}; // object literal
-    // thingObj.shape = "circle"
-    // thingObj.colors = ('black', 'white')
-    // thingObj.use = 'used to play soccer'
-    // console.log(typeof thingObj); // object
-    // console.log(thingObj.shape); // circle
-  
+    let thingObj = {}; // object literal
+    console.log(typeof thingObj); // object
+
+
+    // ADD OBJECT PROPERTIES
+    thingObj.name = 'soccer ball'
+    thingObj.shape = 'square'
+    thingObj.size = '19cm'
+    thingObj.colors = Array('black', 'white')
+    thingObj.use = ' is used to play soccer'
+
+    
+    // CHANGE OBJECT PROPERTY
+    thingObj.shape = 'circle'
+    thingObj.size = '22cm'
+
+
+    // ACCESSING PROPERTIES
+    console.log(thingObj.shape);     // circle
+    console.log(thingObj['size']);   // 22cm
+    console.log(thingObj.colors);    // ["black", "white"]
+    console.log(thingObj.colors[0])  // black
+
+
+    // ADD OBJECT METHOD
+    thingObj.objectUse = function() {
+      console.log(this.name + this.use);
+    }
+    thingObj.objectUse(); 
+    // soccer ball is used to play soccer
+
+    
+    // CHANGE OBJECT METHOD
+    thingObj.objectUse = function() {
+      console.log('Use:', this.name + this.use);
+    }
+    thingObj.objectUse(); 
+    // USE: soccer ball is used to play soccer
+
+
+    // THIS keyword: refers to the current object the code is
+    // being written inside.
+    // FOR EXAMPLE
+    
+
+
+
 
     // Array
     // object using constructor function
