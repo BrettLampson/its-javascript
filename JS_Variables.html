@@ -13,55 +13,59 @@
     // #--------------------------------------------------------------------------#
 
     // 3 types of declarations:
-    // "var" declares a function blocked variable, optionally initializing it to a value.
-    // Can be reassigned but only accessed within a function.  Variables defined with var
-    // move to the top when code is executed.
+    // "var" declares a function scoped variable when inside a function, 
+    // otherwise they are global.  Global var declarations are executed first 
+    // at runtime. They can be anywhere inside your code and still executed first.
+    // Optional to initialize it to a value
 
-    // "const" declares a block scoped variable. CAN NOT be reassigned or
+    // "const" declares a block scoped variable. CANNOT be reassigned or
     // accessible before they appear within the code.
 
-    // "let" similar to const, however it can be reassigned but not redeclared.
-    // declares a block scoped, local variable, optionally initializing it to a value.
+    // "let" declares a block scoped variable.
+    // Similar to const, however it CAN be reassigned but not redeclared.
+    // Optional to initialize it to a value
 
-
-    // 3 examples:
-    var num = 40;
-    let name = 'Oliver'
-    const area_code = '425'; // Used when the value won't change.
+    // // 3 examples:
+    // var num = 40;
+    // let name = 'Oliver'
+    // const area_code = '425'; // Used when the value won't change.
 
     // // Variables cannot start with a number
     // //           cannot be a reserved keyword
     // //           cannot contain a space or hyphen -
     // // Variables can start with a letter, underscore (_), or dollar sign ($)
-    let myText = 'Old myText variable';
+    // let myText = 'Old myText variable';
     // // This statement does 2 things: 
     // // 1) Declares the variable
     // // 2) Assigns a value to it (aka initializes myText)
-    myText = 'New myText variable';  // notice we don't use "let" keyword to reassign it.
+    // myText = 'New myText variable';  // notice we don't use "let" keyword to reassign it.
     // // let myText = 'Ahoy Var' // SyntaxError
 
 
-    // "var" keyword isn't required,
-    // BUT when you omit "var" you are declaring it globally
-    myGlobalVar = 'Hello Global Var';
-    // console.log(myGlobalVar)
+    // // "var" keyword isn't required,
+    // // BUT when you omit "var" you are declaring it globally
+    // myGlobalVar = 'Hello Global Var';
+    // // console.log(myGlobalVar)
 
 
-    // Declaring and initializing variables can span multiple statements
-    let myVar;
-    myVar = 'Hello Var Spanning Multiple Statements';
-    // console.log(myVar)
+    // // Declaring and initializing variables can span multiple statements
+    // let myVar;
+    // myVar = 'Hello Var Spanning Multiple Statements';
+    // // console.log(myVar)
 
-    // Multiple assignment at once
-    var myObj = new Object(),
-        str = 'myString',
-        rand = Math.random(),
-        nextObj = new Object();
+    // // Multiple assignment at once
+    // var myObj = new Object(),
+    //     str = 'myString',
+    //     rand = Math.random(),
+    //     nextObj = new Object();
 
     // Automatic semicolon insertion
     // semicolon use isn't enforced, however its important to now:
     // ASI WILL take effect in the presence of a new line
     // ASI WILL NOT be inserted in the middle of a line
+
+
+    
 
   </script>
 </body>
