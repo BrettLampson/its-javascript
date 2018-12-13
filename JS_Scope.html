@@ -14,20 +14,25 @@
     // #--------------------------------------------------------------------------#
     
     // // Global Scope
-    // // If a variable does not have a "var" keyword, it's
-    // // global, any code on the page has access to read and
-    // // modify this variable.
-    // funny = 'This is a global variable';  // global variable
+    // // If a variable does not have a "var" keyword, it's global, any code on the 
+    // // page has access to read and modify this variable.
+    // // Initialized variable
+    // var funny = 'This is a global variable';  // global variable
     // console.log(funny);
-    // let counter = 0; // global variable
-    // console.log(counter);
+    // // Redeclared variable
+    // funny = 'Still a global variable';
+    // console.log(funny);
+    
+
+    // // SCOPE
+    // var outside = "outside: I'm global"; // global variable
     // function testVars() {
-    //   outside = "outside: I'm global"; // global variable
-    //   let inside = "inside: I'm local";  // local variable
-    // }
-    // testVars();
-    // console.log(outside);  // No error - global variable
-    // console.log(inside);  // ReferenceError - because its local
+    //   var inside1 = "inside1: I'm function scoped";  // local variable
+    //   return inside1
+    // };
+    // console.log(testVars()); // inside1: I'm function scoped
+    // // console.log(outside);  // outside: I'm global
+    // // console.log(inside1);  // ReferenceError - because function scoped
 
 
     // Declarations using "var" do NOT support block scoping.
