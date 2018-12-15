@@ -40,27 +40,27 @@
        
 
     // #--------------------------------------------------------------------------#
-    // CREATE AN OBJECT
-    let thingObj = {};
-    // console.log(typeof thingObj); // object
+    // // CREATE AN OBJECT
+    // let thingObj = {};
+    // // console.log(typeof thingObj); // object
 
 
-    // CREATE  OBJECT PROPERTIES
-    thingObj.name = 'soccer ball';
-    thingObj.shape = 'cube';
-    thingObj.size = '19cm';
-    thingObj.colors = Array('black', 'white')
-    thingObj.use = ' is used to play soccer'
+    // // CREATE  OBJECT PROPERTIES
+    // thingObj.name = 'soccer ball';
+    // thingObj.shape = 'cube';
+    // thingObj.size = '19cm';
+    // thingObj.colors = Array('black', 'white')
+    // thingObj.use = ' is used to play soccer'
 
 
-    // CHANGE AN EXISTING OBJECT PROPERTY
-    thingObj.shape = 'sphere';
+    // // CHANGE AN EXISTING OBJECT PROPERTY
+    // thingObj.shape = 'sphere';
 
     
     // // SET A NEW OBJECT PROPERTY
-    thingObj.inflation = '8.7 psi'
+    // thingObj.inflation = '8.7 psi'
     // thingObj['inflation'] = '8.7 PSI';
-    console.log(thingObj.inflation);
+    // console.log(thingObj.inflation);
     
 
     // // ACCESSING PROPERTIES
@@ -85,11 +85,22 @@
     //   console.log('Use:', this.name + this.use);
     // }
     // thingObj.objectUse();
-    // // USE: soccer ball is used to play soccer
-    // // THIS keyword: refers to the current object the code is
-    // // being written inside.
+    // Use: soccer ball is used to play soccer
+    
+    
+    // // "this" refers to the current object the code is being written inside.
     // // FOR EXAMPLE
+    // var person1 = {
+    //   name: 'Chris',
+    //   greeting: function() {
+    //     console.log('Hello', this.name);
+    //   }
+    // }
+    // person1.greeting();  // Hello Chris
+    // // "this" is useful when dynamically generating objects (using constructors).
+    
 
+    
 
 
 
