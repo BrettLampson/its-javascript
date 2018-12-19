@@ -170,16 +170,29 @@
 
 
     // #--------------------------------------------------------------------------#
-    // CREATE AN OBJECT METHOD
-    // let funnyGuy = {
-    //   firstName: "Babe", 
-    //   middleName: "Herman",
-    //   lastName: "Ruth",
-    //   lastNameFirst: function() {
-    //     return this.lastName + ", " +
-    //     this.firstName
-    //   } 
-    // };
+    // OBJECT INHERITANCE
+    
+    
+    let person = {
+      fullName: function() {
+        return this.firstName,
+        this.lastName;
+      }
+    };
+    
+    let bambino = Object.create(person);
+    bambino.firstName = "Babe"; 
+    bambino.lastName = "Ruth";
+    
+    let theBigUnit = Object.create(person);
+    theBigUnit.firstName = "Randy";
+    theBigUnit.lastName = "Johnson";
+
+    let theWizard = Object.create(person);
+    theWizard.firstName = "Ozzie";
+    theWizard.lastName = "Smith";
+    // Object.create method creates a new object and allows to specify its prototype
+
 
 
     // #--------------------------------------------------------------------------#
@@ -191,14 +204,15 @@
     // CREATE PARENT AND CHILD OBJECTS
     // Parent Objects using "Object.create" and "this"
     // "this" refers to the object that is executing the current function.
-    // 
-    // let person = {
-    //   getName: function() {
-    //     return this.firstName + ' ' +
-    //     this.middleName + ' ' +
-    //     this.lastName;
-    //   }
-    // }
+
+
+    let person = {
+      getName: function() {
+        return this.firstName + ' ' +
+        this.middleName + ' ' +
+        this.lastName;
+      }
+    }
 
     // let funnyGal = Object.create(person);
     // funnyGal.firstName = "Teagan";
