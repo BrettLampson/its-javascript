@@ -15,8 +15,6 @@
     // Objects are collections of related data and/or functionality
     // consisting of variables (properties) and functions (methods).
     // They can be seen as related mutable key-value pairs.
-    // An object usually hides its internal state from other objects and prevents
-    // its direct modification.
 
     // A special internal property __proto__ given to all objects.
 
@@ -166,8 +164,8 @@
     // let funnyGuy = {};                // object
     // console.log(typeof funnyGuy);     // object
     // funnyGuy = {firstName: "Babe"}    // literal notation
-    // funnyGuy.middleName = "Herman";   // dot notation
-    // funnyGuy["lastName"] = "Ruth";    // bracket notation
+    // funnyGuy.firstName = "Babe";      // dot notation
+    // funnyGuy["firstName"] = "Babe";   // bracket notation
 
 
     // #--------------------------------------------------------------------------#
@@ -175,12 +173,12 @@
     // CREATE PARENT AND CHILD OBJECTS
     // Object.create method creates a new object and lets us specify its prototype.
     
-    let person = {
-      fullName: function() {
-        return this.firstName + ' ' +
-        this.lastName;
-      }
-    };
+    // let person = {
+    //   fullName: function() {
+    //     return this.firstName + ' ' +
+    //     this.lastName;
+    //   }
+    // };
     
     // let theGreatBambino = Object.create(person);
     // theGreatBambino.firstName = "Babe"; 
@@ -190,28 +188,19 @@
     // theBigUnit.firstName = "Randy";
     // theBigUnit.lastName = "Johnson";
 
-    let theWizard = Object.create(person);
-    theWizard.firstName = "Ozzie";
-    theWizard.lastName = "Smith";
-    
+    // let theWizard = Object.create(person);
+    // theWizard.firstName = "Ozzie";
+    // theWizard.lastName = "Smith";
 
     // #--------------------------------------------------------------------------#
     // CALL THE METHOD
-    // console.log(theGreatBambino.fullName()); // Babe Ruth
-
+    // console.log(theWizard.fullName()); // Ozzie Smith
+    
 
     // #--------------------------------------------------------------------------#
-    // LOOP OVER AN OBJECT TO RETURN ITS METHODS
-    for (x = 0;x in theWizard) {
-      console.log(x, '=', funnyGuy[x]);
-    }
-    // firstName = Babe
-    // middleName = Herman
-    // lastName = Ruth
-
-
-
-
+    // WIP
+    // #--------------------------------------------------------------------------#
+    
 
 
 
