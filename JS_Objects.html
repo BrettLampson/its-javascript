@@ -98,6 +98,7 @@
     // }
     // person1.greeting();  // Hello Chris
     // // "this" is useful when dynamically generating objects (using constructors).
+    // "this" refers to the object that is executing the current function.
     
     
     // #--------------------------------------------------------------------------#
@@ -171,62 +172,42 @@
 
     // #--------------------------------------------------------------------------#
     // OBJECT INHERITANCE
-    
+    // CREATE PARENT AND CHILD OBJECTS
+    // Object.create method creates a new object and lets us specify its prototype.
     
     let person = {
       fullName: function() {
-        return this.firstName,
+        return this.firstName + ' ' +
         this.lastName;
       }
     };
     
-    let bambino = Object.create(person);
-    bambino.firstName = "Babe"; 
-    bambino.lastName = "Ruth";
+    // let theGreatBambino = Object.create(person);
+    // theGreatBambino.firstName = "Babe"; 
+    // theGreatBambino.lastName = "Ruth";
     
-    let theBigUnit = Object.create(person);
-    theBigUnit.firstName = "Randy";
-    theBigUnit.lastName = "Johnson";
+    // let theBigUnit = Object.create(person);
+    // theBigUnit.firstName = "Randy";
+    // theBigUnit.lastName = "Johnson";
 
     let theWizard = Object.create(person);
     theWizard.firstName = "Ozzie";
     theWizard.lastName = "Smith";
-    // Object.create method creates a new object and allows to specify its prototype
-
-
+    
 
     // #--------------------------------------------------------------------------#
     // CALL THE METHOD
-    // console.log(funnyGuy.lastNameFirst()); // Ruth, Babe
-
-
-    // #--------------------------------------------------------------------------#
-    // CREATE PARENT AND CHILD OBJECTS
-    // Parent Objects using "Object.create" and "this"
-    // "this" refers to the object that is executing the current function.
-
-
-    let person = {
-      getName: function() {
-        return this.firstName + ' ' +
-        this.middleName + ' ' +
-        this.lastName;
-      }
-    }
-
-    // let funnyGal = Object.create(person);
-    // funnyGal.firstName = "Teagan";
-    // funnyGal.lastName = "Presley";
+    // console.log(theGreatBambino.fullName()); // Babe Ruth
 
 
     // #--------------------------------------------------------------------------#
     // LOOP OVER AN OBJECT TO RETURN ITS METHODS
-    // for (x in funnyGuy) {
-    //   console.log(x, '=', funnyGuy[x]);
-    // }
-    // // firstName = Babe
-    // // middleName = Herman
-    // // lastName = Ruth
+    for (x = 0;x in theWizard) {
+      console.log(x, '=', funnyGuy[x]);
+    }
+    // firstName = Babe
+    // middleName = Herman
+    // lastName = Ruth
 
 
 
