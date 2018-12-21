@@ -38,19 +38,33 @@
     // \W Non-word character
     // \d A digit 
     // \D A non-digit
-    // \s
-    // \S
-    // \b
-    // \B
-    // \0
-    // \n
-    // \f
-    // \r
-    // \t
-    // \v
-    // \xxx
-    // \xdd
-    // \xdd
+    // \s whitespace character
+    // \S non-whitespace character
+    // \b find a match at the beginning/end of a word
+    // \B a match not at the biginning/end of a word
+    // \0 NUL character
+    // \n a new line character
+    // \f form feed character
+    // \r carriage return character
+    // \t tab character
+    // \v vertical tab character
+    // \xxx character specified by an octal number xxx
+    // \xdd character specified by a hexidecimal number dd
+    // \xdd the unicode character specified by a hexadecimal number xxxx
+
+
+    // Quantifiers
+    // n+ matches any string that contains at least one n
+    // n* any string that contains zero or more occurances of n
+    // n? a string that contains zero or one occirances of n
+    // n{X} string that contains a seqence of X n's
+    // n{X,Y} strings that contains a sequence of X to Y n's
+    // n{X,} matches any string that contains a sequence of at least X n's
+    // n$ any string with n at the end of it
+    // ^n string with n at the beginning of it
+    // ?=n string that is followed by a specific string n
+    // ?!n string that is not followed by a specific string n 
+    
 
   </script>
 </body>
