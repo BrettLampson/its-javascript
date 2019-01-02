@@ -173,28 +173,28 @@
     // CREATE PARENT AND CHILD OBJECTS
     // Object.create method creates a new object and lets us specify its prototype.
     
-    // let person = {
-    //   fullName: function() {
-    //     return this.firstName + ' ' +
-    //     this.lastName;
-    //   }
-    // };
+    let person = {
+      fullName: function() {
+        return this.firstName + ' ' +
+        this.lastName;
+      }
+    };
     
-    // let theGreatBambino = Object.create(person);
-    // theGreatBambino.firstName = "Babe"; 
-    // theGreatBambino.lastName = "Ruth";
+    let theGreatBambino = Object.create(person);
+    theGreatBambino.firstName = "Babe"; 
+    theGreatBambino.lastName = "Ruth";
     
-    // let theBigUnit = Object.create(person);
-    // theBigUnit.firstName = "Randy";
-    // theBigUnit.lastName = "Johnson";
+    let theBigUnit = Object.create(person);
+    theBigUnit.firstName = "Randy";
+    theBigUnit.lastName = "Johnson";
 
-    // let theWizard = Object.create(person);
-    // theWizard.firstName = "Ozzie";
-    // theWizard.lastName = "Smith";
+    let theWizard = Object.create(person);
+    theWizard.firstName = "Ozzie";
+    theWizard.lastName = "Smith";
 
     // #--------------------------------------------------------------------------#
     // CALL THE METHOD
-    // console.log(theWizard.fullName()); // Ozzie Smith
+    console.log(theWizard.fullName()); // Ozzie Smith
     
 
     // #--------------------------------------------------------------------------#
