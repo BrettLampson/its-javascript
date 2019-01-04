@@ -24,8 +24,8 @@
     let fam = ['Brett', 'Shaina', 'Kayden', 'Oliver'];  // used throughout file
 
     // #--------------------------------------------------------------------------#
-    // fam.concat()
-    // Used to merge two or more arrays.
+    // // fam.concat()
+    // // Used to merge two or more arrays.
     // let one = ['Thing 1'];
     // let two = ['Thing 2'];
     // let three = one.concat(two); 
@@ -343,20 +343,20 @@
     // Returns a new Array Iterator object that contains the values 
     // for each index in the array.
 
-    // const array1 = ['a', 'b', 'c'];
-    // const iterator = array1.values();
-
-    // for (const value of iterator) {
-    //   console.log(value); 
-    // }
-    // // expected output: "a" "b" "c"
-
+    const array1 = ['a', 'b', 'c'];
+    const iterator = array1.values();
+    for (const value of iterator) {
+      console.log(value); 
+    }
+    // expected output: "a" "b" "c"
+    
 
     // #--------------------------------------------------------------------------#
     // fam.valueOf()
-    // WIP
-    // let fam = ['Brett', 'Shaina', 'Kayden', 'Oliver'];
-    // console.log(fam.valueOf('Shaina'));
+    // Returns the primitive value of the specified object.
+    // You rarely need to invoke the valueOf method yourself; 
+    // JavaScript automatically invokes it when encountering an object 
+    // where a primitive value is expected.
     
 
     // #--------------------------------------------------------------------------#
@@ -368,29 +368,30 @@
 
     // #--------------------------------------------------------------------------#
     // // Creating Arrays
-    var groceryList = []; // array literal
-
+    // var groceryList = []; // array literal
 
     // #--------------------------------------------------------------------------#
     // // Add items to an empty Array
-    groceryList.push('Milk');
-    groceryList.push('Eggs', 'Bacon');
-    console.log(groceryList); // ["Milk", "Eggs", "Bacon"]
-    
-    // #--------------------------------------------------------------------------#
-    // // Add items to beginning of Array
-    groceryList.unshift('Cheese') 
-    console.log(groceryList); // ["Cheese", "Milk", "Eggs", "Bacon"]
+    // groceryList.push('Milk');
+    // groceryList.push('Eggs', 'Bacon');
+    // // console.log(groceryList); // ["Milk", "Eggs", "Bacon"]
+
 
     // #--------------------------------------------------------------------------#
-    // // Iterate over an 
-    for (var i = 0; i < groceryList.length; i++) {
-      console.log(groceryList[i]);
-    }
-    // Cheese
-    // Milk
-    // Eggs
-    // Bacon
+    // // Add items to beginning of Array
+    // groceryList.unshift('Cheese') 
+    // // console.log(groceryList); // ["Cheese", "Milk", "Eggs", "Bacon"]
+
+
+    // #--------------------------------------------------------------------------#
+    // // Iterate over an array
+    // for (var i = 0; i < groceryList.length; i++) {
+    //   console.log(groceryList[i]);
+    // }
+    // // Cheese
+    // // Milk
+    // // Eggs
+    // // Bacon
     
 
 
