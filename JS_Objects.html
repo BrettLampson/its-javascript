@@ -38,64 +38,65 @@
        
 
     // #--------------------------------------------------------------------------#
-    // // CREATE AN OBJECT
-    // let thingObj = {};
-    // // console.log(typeof thingObj); // object
+    // CREATE A SOCCER BALL OBJECT
+    let thingObj = {};
+    console.log(typeof thingObj); // object
 
 
-    // // CREATE  OBJECT PROPERTIES
-    // thingObj.name = 'soccer ball';
-    // thingObj.shape = 'cube';
-    // thingObj.size = '19cm';
-    // thingObj.colors = Array('black', 'white')
-    // thingObj.use = ' is used to play soccer'
+    // CREATE  OBJECT PROPERTIES
+    thingObj.name = 'soccer ball';
+    thingObj.shape = 'cube';
+    thingObj.size = '19cm';
+    thingObj.colors = Array('black', 'white')
+    thingObj.use = ' is used to play soccer'
+    
 
-
-    // // CHANGE AN EXISTING OBJECT PROPERTY
-    // thingObj.shape = 'sphere';
+    // CHANGE AN EXISTING OBJECT PROPERTY
+    thingObj.shape = 'sphere';
 
     
-    // // SET A NEW OBJECT PROPERTY
-    // thingObj.inflation = '8.7 psi'
-    // thingObj['inflation'] = '8.7 PSI';
+    // INTRODUCE A NEW OBJECT PROPERTY
+    thingObj.inflation = '8.7 psi'
+    // CHANGE THIS NEW PROPERTY
+    thingObj['inflation'] = '8.7 PSI';
     // console.log(thingObj.inflation);
     
 
-    // // ACCESSING PROPERTIES
-    // console.log(thingObj.name);   // soccer ball
-    // console.log(thingObj.shape);  // sphere
-    // console.log(thingObj['size']);   // 22cm
-    // console.log(thingObj.colors);    // ["black", "white"]
-    // console.log(thingObj.colors[0]);  // black
-    // console.log(thingObj[inflation]);   // 
+    // ACCESSING PROPERTIES
+    console.log(thingObj.name);          // soccer ball
+    console.log(thingObj.shape);         // sphere
+    console.log(thingObj['size']);       // 22cm
+    console.log(thingObj.colors);        // ["black", "white"]
+    console.log(thingObj.colors[0]);     // black
+    console.log(thingObj['inflation']);  // 8.7 PSI
+
+    // ADD OBJECT METHOD
+    thingObj.objectUse = function () {
+      console.log(this.name + this.use);
+    }
+    thingObj.objectUse();
+    // soccer ball is used to play soccer
 
 
-    // // ADD OBJECT METHOD
-    // thingObj.objectUse = function () {
-    //   console.log(this.name + this.use);
-    // }
-    // thingObj.objectUse();
-    // // soccer ball is used to play soccer
-
-
-    // // CHANGE OBJECT METHOD
-    // thingObj.objectUse = function () {
-    //   console.log('Use:', this.name + this.use);
-    // }
-    // thingObj.objectUse();
+    // CHANGE OBJECT METHOD
+    thingObj.objectUse = function () {
+      console.log('Use:', this.name + this.use);
+    }
+    thingObj.objectUse();
     // Use: soccer ball is used to play soccer
     
     
-    // // "this" refers to the current object the code is being written inside.
-    // // FOR EXAMPLE
-    // var person1 = {
-    //   name: 'Chris',
-    //   greeting: function() {
-    //     console.log('Hello', this.name);
-    //   }
-    // }
-    // person1.greeting();  // Hello Chris
-    // // "this" is useful when dynamically generating objects (using constructors).
+    // "this" refers to the current object the code is being written inside.
+    // "this" refers to the current object that our 'objectUse' method is pointing to.
+    // FOR EXAMPLE
+    var person1 = {
+      name: 'Chris',
+      greeting: function() {
+        console.log('Hello', this.name);
+      }
+    }
+    person1.greeting();  // Hello Chris
+    // "this" is useful when dynamically generating objects (using constructors).
     // "this" refers to the object that is executing the current function.
     
     
@@ -173,32 +174,32 @@
     // CREATE PARENT AND CHILD OBJECTS
     // Object.create method creates a new object and lets us specify its prototype.
     
-    let person = {
-      fullName: function() {
-        return this.firstName + ' ' +
-        this.lastName;
-      }
-    };
+    // let person = {
+    //   fullName: function() {
+    //     return this.firstName + ' ' +
+    //     this.lastName;
+    //   }
+    // };
     
-    let theGreatBambino = Object.create(person);
-    theGreatBambino.firstName = "Babe"; 
-    theGreatBambino.lastName = "Ruth";
+    // let theGreatBambino = Object.create(person);
+    // theGreatBambino.firstName = "Babe"; 
+    // theGreatBambino.lastName = "Ruth";
     
-    let theBigUnit = Object.create(person);
-    theBigUnit.firstName = "Randy";
-    theBigUnit.lastName = "Johnson";
+    // let theBigUnit = Object.create(person);
+    // theBigUnit.firstName = "Randy";
+    // theBigUnit.lastName = "Johnson";
 
-    let theWizard = Object.create(person);
-    theWizard.firstName = "Ozzie";
-    theWizard.lastName = "Smith";
-
-    // #--------------------------------------------------------------------------#
-    // CALL THE METHOD
-    console.log(theWizard.fullName()); // Ozzie Smith
-    
+    // let theWizard = Object.create(person);
+    // theWizard.firstName = "Ozzie";
+    // theWizard.lastName = "Smith";
 
     // #--------------------------------------------------------------------------#
-    // WIP
+    // // CALL THE METHOD
+    // console.log(theWizard.fullName()); // Ozzie Smith
+    
+
+    // #--------------------------------------------------------------------------#
+    // WIP BELOW
     // #--------------------------------------------------------------------------#
     
 
