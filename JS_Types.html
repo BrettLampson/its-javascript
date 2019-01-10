@@ -32,38 +32,78 @@
     // RegExp
     // String
 
-    // // Primitives vs. Objects
-    // // Array
-    var names = ['Bob', 'Alice', 'Luke']; // Array primitive
-    var alsoNames = new Array('Bob', 'Alice', 'Luke'); // Array Object
-    // console.log(names);
-    // console.log(alsoNames);
+    // #--------------------------------------------------------------------------#
+    // Primitives vs. Objects
     
-    // // round number
-    var roundNumber = Math.round(3.14);
-    // console.log(roundNumber);
+    // // Arrays
+    // var names = ['Bob', 'Alice'];               // Array primitive
+    // var alsoNames = new Array('Bob', 'Alice');  // Array Object
     
-    // // todays date
-    var todayDate = new Date()
-    // console.log(todayDate);
-
-    // // boolean object
-    var booleanObj = new Boolean(true);
-    // console.log(booleanObj);
-
+    // // Numbers
+    // var roundNumber = Math.round(3.14);
+    
+    // // Dates
+    // var todayDate = new Date()
+    
+    // // Booleans
+    // var bool = true;                  // boolean primitive
+    // var boolObj = new Boolean(true);  // boolean object
+    
     // // infinity
-    var unquantifiablyBigNumber = Infinity;
+    // var unquantifiablyBigNumber = Infinity;
 
     // // string object
-    var hello = new String('Hello!');
+    // var hello = new String('Hello!');
 
     // // String Literal vs. String Object
-    var movie = 'Pulp Fiction'
-    var movieObj = new String('Pulp Fiction');
+    // var movie = 'Pulp Fiction'
+    // var movieObj = new String('Pulp Fiction');
     // alert(movie);
     // alert(movieObj);
     // These look the same, but under the hood are very different
     
+
+    // #--------------------------------------------------------------------------#
+    // STRICT VS NONSTRICT
+    // console.log(42 == '42')  // TRUE! // This behavior in JS is known as type coercion
+    // console.log(42 === '42') // FALSE
+    // console.log(42 != '42')  // FALSE
+    // console.log(42 !== '42') // TRUE
+  
+
+    // #--------------------------------------------------------------------------#
+    // NULL AND UNDEFINED
+
+    // // NULL stands for no value. Setting variables to NULL is a clear
+    // // indication you want the value to NOT exist.
+    // // null is often used as part of variable declarations or passed
+    // // in as arguments to function calls.
+
+    // // Example:
+    // var test = null;
+    // if (test === null) {
+    //   test = 'Peter Griffin';
+    // } else {
+    //   test = null;
+    // }
+    
+    // // CHECKING FOR NULL
+    // if (test === null) {
+    //   // do something
+    // }
+    
+
+    // UNDEFINED
+    // undefined isn't used as an assignment.  Instead, you'll spend time
+    // checking to see if the value of something is "undefined". 
+
+    // // CHECKING FOR UNDEFINED
+    // var myVar;
+
+    // if (typeof myVar === 'undefined') {
+    //   alert('Define Me!');
+    // }
+
 
   </script>
 </body>
