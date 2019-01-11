@@ -5,12 +5,61 @@
   <title>DOM</title>
 </head>
 <body>
+  <div id="main">
+    <div class="pictureContainer">
+      <img class="theImage" src="smiley.png" height="300" width="150"/>
+    </div>
+    <div class="pictureContainer">
+      <img class="theImage" src="tongue.png" height="300" width="150"/>
+    </div>
+    <div class="pictureContainer">
+      <img class="theImage" src="meh.png" height="300" width="150"/>
+    </div>
+    <div class="pictureContainer">
+      <img class="theImage" src="sad.png" height="300" width="150"/>
+    </div>  
+  </div> 
   <script>
     'use strict';
     // #--------------------------------------------------------------------------#
     // DOM (Document Object Model)
     // #--------------------------------------------------------------------------#
     
+    // DOM is made up of a hierarchical structure:
+    //                  Window
+    //                    |
+    //                 Document
+    //                    | 
+    //                   HTML
+    //                  /   \
+    //                 /     \
+    //            Head         Body
+    //      /   /    /            \   \
+    // Meta, title, link       div   script
+    //                       /  /  \
+    //                     p   h1   img               
+
+    // All are nodes, but 99% of the time we only care about "element" nodes
+    // because these are what we work with mostly.
+
+    // #--------------------------------------------------------------------------#
+    // THE WINDOW OBJECT
+    // Uses: 
+    // accessing current URL, info about screen, info about page frames, 
+    // local storage, fiddling with scrollbar, setting statusbar, a lot more.
+
+    // #--------------------------------------------------------------------------#
+    // THE DOCUMENT OBJECT
+    // This is where we'll be doing much of our work. 
+    // We can simply display things, but also manipulate the document at will.
+    // Events are controlled here (clicks/hover/checking a box/key presses, etc.)
+  
+
+    // #--------------------------------------------------------------------------#
+    // querySelector
+    // 
+
+
     // #--------------------------------------------------------------------------#
     // PROPERTIES
     // document.activeElement()
