@@ -8,7 +8,7 @@
 <script>
     'use strict';
     // #--------------------------------------------------------------------------#
-    // Functions
+    // FUNCTIONS
     // #--------------------------------------------------------------------------#
     
     // How javascript processes variables
@@ -38,13 +38,13 @@
 
     // The "return" keyword is used to return data from a function
     // The "return" keyword ends a function, in practice it can be used just to exit a function
-    function doSomething() {
-      one = 'One';
-      two = 'Two';
-      alert(one + ' will print')
-      return;
-      alert(two + ' will not print')
-    }
+    // function doSomething() {
+    //   one = 'One';
+    //   two = 'Two';
+    //   alert(one + ' will print')
+    //   return;
+    //   alert(two + ' will not print')
+    // }
     // doSomething()
 
 
@@ -69,6 +69,54 @@
     // if (fileName.endsWith('.html')) {
     //   console.log('This is an html file')
     // }
+
+
+    // #--------------------------------------------------------------------------#
+    // // ANONYMOUS FUNCTIONS
+    // // These functions can only be called if associated with a variable as shown 
+    // var cup = function() {
+    //   return "I'm a " + cup.name
+    // }
+    // var bowl = cup();
+    // console.log(bowl);  // I'm a cup
+    
+    // // Anonymous functions can also be called as part of another function.
+    // window.setTimeout(function() {
+    //   console.log('This delay took 2000ms');
+    // }, 2000);
+
+    
+    // #--------------------------------------------------------------------------#
+    // // IIFE (immediately invoked function expression)
+    // IIFE is a function that executes immediately.
+    // Wrap () around the whole thing to tell Javascript this function
+    // is an expression.
+
+    // (function() {
+    //   var lyric = "I'm the man";
+    //   console.log(lyric);
+    // })();
+
+    // #--------------------------------------------------------------------------#
+    // // IIFE WITH ARGUMENTS
+    // (function (first, last) {
+    //   console.log('My name is ' + first + ' ' + last + ', ' + 'M.D.' );
+      
+    // }) ('Peter', 'Griffin');
+
+    // #--------------------------------------------------------------------------#
+    // // WHEN TO USE AN IIFE
+    // First of all, the difference between IIFE and regular functions is that
+    // IIFEs leave no evidence of their existance after they're run.  Any variables
+    // you put in an IIFE is local to that function. They exist in a bubble
+    // and have no interference with other code and dissappear without trace.
+
+    // 1) Protect your code from someone else's application.  Ensure functionality
+    // no matter where it is run, wrap your code in an IIFE.
+
+    // 2) WIP
+
+
 
 
 
