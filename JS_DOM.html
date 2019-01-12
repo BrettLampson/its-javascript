@@ -2,23 +2,38 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>DOM</title>
+  <title>DOM...</title>
+  <style>
+    .highlight {
+      font-family: 'Arial';
+      padding: 30px;
+    }
+
+    .summer {
+      font-size: 64px;
+      color: #0099FF;
+    }
+
+  </style>
 </head>
 <body>
-  <div id="main">
+  <h1 id="theTitle" class="highlight summer">What's happening?</h1>
+
+  <!-- <div id="main">
     <div class="pictureContainer">
-      <img class="theImage" src="smiley.png" height="300" width="150"/>
+      <img class="someClass" src="Signature.png" height="150" width="300"/>
     </div>
     <div class="pictureContainer">
-      <img class="theImage" src="tongue.png" height="300" width="150"/>
+      <img class="someClass" src="PlayHand.png" height="150" width="300"/>
     </div>
     <div class="pictureContainer">
-      <img class="theImage" src="meh.png" height="300" width="150"/>
+      <img class="someClass" src="rightarrows2.png" height="150" width="300"/>
     </div>
     <div class="pictureContainer">
-      <img class="theImage" src="sad.png" height="300" width="150"/>
+      <img class="someClass" src="woodworking.jpg" height="150" width="300"/>
     </div>  
-  </div> 
+  </div>  -->
+
   <script>
     'use strict';
     // #--------------------------------------------------------------------------#
@@ -34,7 +49,7 @@
     //                  /   \
     //                 /     \
     //            Head         Body
-    //      /   /    /            \   \
+    //      /   /    \          /   \
     // Meta, title, link       div   script
     //                       /  /  \
     //                     p   h1   img               
@@ -56,8 +71,34 @@
   
 
     // #--------------------------------------------------------------------------#
-    // querySelector
-    // 
+    // // querySelector
+    // var element = document.querySelector("CSS Selector"); //ex. (".someClass") 
+    // // This function takes an argument for the element you wish to find.
+    // // It returns ONLY the FIRST element targeted, even if other elements 
+    // // match it ignores them.
+
+
+    // MODIFYING TEXT USING textContent
+    var changeTitle = document.querySelector('#theTitle');
+    changeTitle.textContent = 'Oppa Gangnam  Style!';
+
+
+    // // querySelectorAll
+    // var element = document.querySelectorAll("CSS Selector"); //ex. (".someClass")  
+    // // This function takes an argument for the element you wish to find.
+    // // It returns an array-like container of elements that match.
+    // var images = document.querySelectorAll(".someClass");
+    // for (var i=0; i < images.length; i++) {
+    //   var image = images[i];
+    //   alert(image.getAttribute('src'));
+    // }
+
+    // If I want all image elements, I pass in ('img')
+    // To target and img with src set to meh, I pass in ("img[src='meh.png']")
+    // "attribute selector"
+
+    // CAVEAT: the selector specified only applies to the descendants of the
+    // starting element.  The starting element itself is not included.
 
 
     // #--------------------------------------------------------------------------#
@@ -69,19 +110,24 @@
 
     // #--------------------------------------------------------------------------#
     // Node Properties
-    // attributes  - Returns a live collection of all atrributes registered to an element
+    // attributes  - Returns a live collection of all atrributes 
+    //               registered to an element
     // baseURI     - Provides the absolute base URL of an HTML element
     // childNodes  - Gives a collection of an elements child nodes
     // firstChild  - Returns the first child node of an element
     // lastChild   - Returns the last child node of an element
-    // nextSibling - Gives you the next node at the same node tree level and stores it as an object
+    // nextSibling - Gives you the next node at the same node tree level and 
+    //               stores it as an object
     // nodeName    - Returns the name of a node (either element name of #textNode)
     // nodeType    - Returns the type of a node (1=element, 3=text)
-    // nodeValue   - Sets or returns the value of a node (the text content in the case of text nodes)
+    // nodeValue   - Sets or returns the value of a node (the text content in 
+    //               the case of text nodes)
     // ownerDocument   - The top-level document object for this node
     // parentNode      - Returns the parent node of an element
-    // previousSibling - Returns the node immediately preceding the current one and stores it as an object
-    // textContent     - Sets or returns the textual content of a node and its decendants
+    // previousSibling - Returns the node immediately preceding the current one 
+    //                   and stores it as an object
+    // textContent     - Sets or returns the textual content of a node and 
+    //                   its decendants
 
     // #--------------------------------------------------------------------------#
     // // Node Methods
@@ -130,11 +176,13 @@
 
     // #--------------------------------------------------------------------------#
     // document.getElementByTagName('tagname')
-    // Retrieves all elements with the tag name tagname and stores them in an arraylike list
+    // Retrieves all elements with the tag name tagname and stores them in 
+    // an arraylike list
 
-
-    // // Window Properties
-    // closed Checks whether a window has been close or not and returns true or false
+    // #--------------------------------------------------------------------------#
+    // // WINDOW PROPERTIES
+    // closed Checks whether a window has been close or not and returns 
+    // true or false
     // defaultStatus -
     // document -
     // frames -
