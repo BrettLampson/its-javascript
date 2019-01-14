@@ -78,9 +78,27 @@
     // // match it ignores them.
 
 
-    // MODIFYING TEXT USING textContent
-    var changeTitle = document.querySelector('#theTitle');
-    changeTitle.textContent = 'Oppa Gangnam  Style!';
+    // // MODIFYING TEXT USING textContent
+    // var changeTitle = document.querySelector('#theTitle');
+    // changeTitle.textContent = 'Changed Title!';
+
+    
+    // // getAttribute method
+    // var changeTitle = document.querySelector('h1');
+    // console.log('h1 tag id =', changeTitle.getAttribute('id'));  // id = theTitle
+
+    // // setAttribute method
+    // document.body.setAttribute('class', 'bar foo');
+    // we are setting "class" attribute on the "body" element to "bar foo"
+
+    // WIP
+    // NOTE: setting id and class is so important there are other ways.
+    // <h1 id="theTitle" class="highlight summer">What's happening?</h1>
+    var title = document.querySelector('h1');
+    console.log(title.id);
+    document.body.className = 'bar foo';
+
+    // Stay tuned for the BEST way of setting class values ---> "classList"
 
 
     // // querySelectorAll
