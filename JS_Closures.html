@@ -10,7 +10,7 @@
   <script>
     'use strict';
     // #--------------------------------------------------------------------------#
-    // Cosures
+    // CLOSURES
     // #--------------------------------------------------------------------------#
 
     function youSayGoodbye() {
@@ -20,7 +20,7 @@
       }
       return andISayHello;
     }
-    // youSayGoodbye(); // 'Outer Function'
+    youSayGoodbye(); // 'Outer Function'
     // let something = youSayGoodbye();
     //To call this function, initilize a variable that points to youSayGoodbye().
     //The moment this line runs, all code inside youSayGoodbye gets run as well.
@@ -29,14 +29,14 @@
     // something(); //'Inner'
 
 
-    function outerFunc() {
-      let message = 'Hello from the inner function'
-      function innerFunc() {
-        console.log(message)
-      }
-      return innerFunc;
-    }
-    let myFunc = outerFunc();
+    // function outerFunc() {
+    //   let message = 'Hello from the inner function'
+    //   function innerFunc() {
+    //     console.log(message)
+    //   }
+    //   return innerFunc;
+    // }
+    // let myFunc = outerFunc();
     // console.log(myFunc.name);
     // myFunc();
 
