@@ -48,11 +48,11 @@
     //                   HTML
     //                  /   \
     //                 /     \
-    //            Head         Body
+    //            Head         Body  -------------- parent
     //      /   /    \          /   \
-    // Meta, title, link       div   script
+    // Meta, title, link       div   script ------- siblings
     //                       /  /  \
-    //                     p   h1   img               
+    //                    div p h1 img ------------ childern
 
     // All are nodes, but 99% of the time we only care about "element" nodes
     // because these are what we work with mostly.
@@ -227,6 +227,32 @@
     // top -
 
 
+    
+    // #--------------------------------------------------------------------------#
+    // NAVIGATING THE DOM
+    // #--------------------------------------------------------------------------#
+    
+    // Window and Document are global properties, below the HTML element level
+    // you can use querySelector and querySelectorAll; just these two methods
+    // are too limiting.  To help, properties like firstChild, lastChild,
+    // parentNode, children, previousSibling and nextSibling.
+  
+    //                  Window
+    //                    |
+    //                 Document
+    //                    | 
+    //                   HTML
+    //                  /   \
+    //                 /     \
+    //            Head         Body  -------------- parent
+    //      /   /    \          /   \
+    // Meta, title, link       div   script ------- siblings
+    //                       /  /  \
+    //                    div p h1 img ------------ childern
+
+
+    
+  
   </script>
 </body>
 </html>
