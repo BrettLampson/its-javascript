@@ -232,10 +232,15 @@
     // NAVIGATING THE DOM
     // #--------------------------------------------------------------------------#
     
-    // Window and Document are global properties, below the HTML element level
-    // you can use querySelector and querySelectorAll; just these two methods
-    // are too limiting.  To help, properties like firstChild, lastChild,
-    // parentNode, children, previousSibling and nextSibling.
+    // Window and Document are global properties 
+    // Below the HTML element level, the DOM branches out:
+    // When you know your targets use querySelector and querySelectorAll
+    // When you don't know your targets use properties: 
+    // firstChild, lastChild, parentNode, children, previousSibling and nextSibling.
+    
+    // ALL ELEMENTS in the DOM have at least one combination of:
+    // "parents", "siblings" or "children"
+    
   
     //                  Window
     //                    |
@@ -244,15 +249,42 @@
     //                   HTML
     //                  /   \
     //                 /     \
-    //            Head         Body  -------------- parent
-    //      /   /    \          /   \
-    // Meta, title, link       div   script ------- siblings
-    //                       /  /  \
-    //                    div p h1 img ------------ childern
-
+    //            Head        Body  ---------------- parent
+    //      /   /    \         /   \
+    // Meta,  title,  link   div    script --------- siblings
+    //                     / / \ \
+    //                   img h1 p div -------------- childern
 
     
+    // // Checking whether a child exists
+    // var bodyElement = document.body;
+    // if (bodyElement.firstChild) {
+    //   console.log('Found a child element...');
+    // }
+    
+    // // Accessing ALL child elements
+    // var bodyElement = document.body;
+    // for (var i = 0; i < bodyElement.children.length; i++) {
+    //   var childElement = bodyElement.children[i];
+    //   console.log(childElement.tagName);
+    // }
   
+    // // Walk the DOM - recursively and returns every HTML element
+    // function theDomElementWalker(node) {
+    //   if (node.nodeType == 1) {
+    //     // do something with the node
+    //     node = node.firstChild;
+    //     while (node) {
+    //       theDomElementWalker(node);
+    //       node = node.nextSibling;
+    //     }
+    //   }
+    // }
+    // // CALL IT by passing in a node you want to start the walk from
+    // var texasRanger = document.querySelector('#texas');
+    // theDomElementWalker(texasRanger)
+
+
   </script>
 </body>
 </html>
