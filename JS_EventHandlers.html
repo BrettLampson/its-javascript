@@ -28,6 +28,29 @@
     // onsubmit    // THe user submitted a form
     // onunload    // The user left the page
 
+    // // addEventListener syntax
+    source.addEventListener(eventName, eventHandler, useCapture);
+    // // Source
+    // // listen for events on elements, objects, document, window ...
+    // // Event Name
+    // // click, mousemove, mouseover, mouseout, dblclick, load, scroll...
+    // // Event Handler
+    // // specify a function that will get called when the event occurs...
+    // // Capture
+    // // true or false...
+
+    // Event Listener
+    document.addEventListener("click", changeColor, flase);
+    // Event Handler
+    function changeColor() {
+      document.body.style.backgroundColor = 'dark red';
+    }
+
+    // EXAMPLE
+    
+
+
+
   </script>
 </body>
 
