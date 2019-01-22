@@ -18,8 +18,19 @@
 </head>
 <body>
   <h1 id="theTitle" class="highlight summer">What's happening?</h1>
+  <div id="outerContainer">
+    <div>
+      <h1>This one will change your life...</h1>
+    </div>
+  </div>
+  <div id="footer">
+    <div class="share">
+      <p>Something</p>
+      <img src="blah.png" alt="#">
+    </div>
+  </div>
 
-  <div id="main">
+  <!-- <div id="main">
     <div class="pictureContainer">
       <img class="someClass" src="Signature.png" height="150" width="300"/>
     </div>
@@ -32,7 +43,7 @@
     <div class="pictureContainer">
       <img class="someClass" src="Signature.png" height="100" width="200"/>
     </div>  
-  </div>
+  </div> -->
 
   <script>
     'use strict';
@@ -291,7 +302,7 @@
     // just a few lines of javascript.  Lets explore the magic:
 
     // #--------------------------------------------------------------------------#
-    // CREATING ELEMENTS (that don't exist in HTML markup)
+    // CREATING ELEMENTS (that don't exist in HTML markup) with appendChild
     // 2 things needed for the new element to become part of the DOM:
     // 1) Find an element to act as its parent
     // 2) Use appendChild and add the element you want into that parent element.
@@ -299,18 +310,49 @@
     // Lets do it!
     
     //body//
-      <h1 id="theTitle" class="highlight summer">What's happening?</h1>
-      //script//
-        var newElement = document.createElement('p');
-        newElement.textContent = 'I exist entirely in your imagination.';
-        document.body.appendChild(newElement); 
-      //script//
+      // <h1 id="theTitle" class="highlight summer">What's happening?</h1>
+        // script//
+          // var newElement = document.createElement('p');
+          // newElement.textContent = 'I exist entirely in your imagination.';
+          // document.body.appendChild(newElement);  // body is the parent
+        // script//
     //body
 
-    // 
-    // Now we need to place this somewhere in the DOM
+    // NOW the 'p' element is a functioning member of the DOM
+    // The appendChild method ALWAYS adds the element AFTER the youngest child
+    // To insert newElement elsewhere use "insertBefore" function on the parent.
+    // To insert after, you must use a trick:
+    // var h1Element = document.querySelector('h1');
+    // document.body.insertBefore(newElement, h1Element.nextSibling);
+
+    // // make it a function (if you'll use it often)
+    // function insertAfter(target, newElem) {
+    //   target.parentNode.insertBefore(newElem, target.nextSibling);
+    // }
 
 
+    // #--------------------------------------------------------------------------#
+    // REMOVING ELEMENTS with removeChild
+    // var newElement = document.createElement('p');
+    // newElement.textContent = 'I exist entirely in your imagination.';
+    // document.body.appendChild(newElement);
+    // document.body.removeChild(newElement);
+    // newElement.parentNode.removeChild(newElement);
+    // NOTE: you MUST remove the element from the parent of the target element
+
+    // #--------------------------------------------------------------------------#
+    // CLONING ELEMENTS with cloneNode
+    var share = document.querySelector(".share");
+    var shareClone = share.cloneNode(false); //false means only the div referenced
+    // by share is cloned.  If set to true, children of the cloned element will 
+    // come along.
+
+    document.querySelector("footer").appendChild(shareClone); // notice this step 
+    // is identical to createElement.  We are appending our cloned element to the 
+    // footer div element so that it finds mention in the DOM.  Note: the cloned
+    // element also contains all attributes that the original element had, 
+    // including class values or ids (ids must be unique, so extra work is needed
+    // to keep id names unique).
   </script>
 </body>
 </html>
