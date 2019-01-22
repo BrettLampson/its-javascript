@@ -284,6 +284,32 @@
     // var texasRanger = document.querySelector('#texas');
     // theDomElementWalker(texasRanger)
 
+    // #--------------------------------------------------------------------------#
+    // DYNAMIC JAVASCRIPT
+    // DOM does NOT have to be made up of HTML elements existing in markup.
+    // You can create HTML elements out of thin air and add them to your DOM, using
+    // just a few lines of javascript.  Lets explore the magic:
+
+    // #--------------------------------------------------------------------------#
+    // CREATING ELEMENTS (that don't exist in HTML markup)
+    // 2 things needed for the new element to become part of the DOM:
+    // 1) Find an element to act as its parent
+    // 2) Use appendChild and add the element you want into that parent element.
+
+    // Lets do it!
+    
+    //body//
+      <h1 id="theTitle" class="highlight summer">What's happening?</h1>
+      //script//
+        var newElement = document.createElement('p');
+        newElement.textContent = 'I exist entirely in your imagination.';
+        document.body.appendChild(newElement); 
+      //script//
+    //body
+
+    // 
+    // Now we need to place this somewhere in the DOM
+
 
   </script>
 </body>
