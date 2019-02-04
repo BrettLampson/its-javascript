@@ -342,12 +342,12 @@
 
     // #--------------------------------------------------------------------------#
     // CLONING ELEMENTS with cloneNode
-    var share = document.querySelector(".share");
-    var shareClone = share.cloneNode(false); //false means only the div referenced
+    // var share = document.querySelector(".share");
+    // var shareClone = share.cloneNode(false); //false means only the div referenced
     // by share is cloned.  If set to true, children of the cloned element will 
     // come along.
 
-    document.querySelector("footer").appendChild(shareClone); // notice this step 
+    // document.querySelector("footer").appendChild(shareClone); // notice this step 
     // is identical to createElement.  We are appending our cloned element to the 
     // footer div element so that it finds mention in the DOM.  Note: the cloned
     // element also contains all attributes that the original element had, 
