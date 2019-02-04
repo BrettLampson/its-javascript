@@ -12,12 +12,42 @@
     // #--------------------------------------------------------------------------#
     // Events
     // #--------------------------------------------------------------------------#
-    
-    // // Event
-    
-    
 
+    // To work with events there are 2 things you need to do:
+    // 1) Listen for events
+    // 2) React to these events
+
+
+    // 1) LISTENING
+    // addEventListener syntax
+    // source.addEventListener(eventName, eventHandler, useCapture);
+
+    // // source.
+    // // call addEventListener from typically DOM elements also objects, 
+    // // document, window or other objects that support events.
     
+    // // eventName (full list at http://bit.ly/kirupaEvents)
+    // // click, mousemove, mouseover, mouseout, dblclick, load, scroll...
+    
+    // // eventHandler
+    // // specify a function that will get called when the event occurs...
+    // // the eventHandler is nothing more than a function.  The only
+    // // distinction between a typical function and an event handler
+    // // function is the event handler function is an argument inside
+    // // the eventListener function call.
+    
+    // // useCapture
+    // // true or false...
+
+
+    // Event Listener
+    // document.addEventListener("click", changeColor, flase);
+    // Event Handler
+    // function changeColor() {
+    //   document.body.style.backgroundColor = 'dark red';
+    // }
+
+    // 2) REACTING
 
   </script>
 </body>
