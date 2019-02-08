@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
   <title>Events</title>
 </head>
 
@@ -22,32 +21,59 @@
     // addEventListener syntax
     // source.addEventListener(eventName, eventHandler, useCapture);
 
-    // // source.
-    // // call addEventListener from typically DOM elements also objects, 
-    // // document, window or other objects that support events.
+    // SOURCE.
+    // call addEventListener from typically DOM elements also objects, 
+    // document, window or other objects that support events.
     
-    // // eventName (full list at http://bit.ly/kirupaEvents)
-    // // click, mousemove, mouseover, mouseout, dblclick, load, scroll...
+    // EVENTNAME (full list at http://bit.ly/kirupaEvents)
+    // click, mousemove, mouseover, mouseout, dblclick, load, scroll...
     
-    // // eventHandler
-    // // specify a function that will get called when the event occurs...
-    // // the eventHandler is nothing more than a function.  The only
-    // // distinction between a typical function and an event handler
-    // // function is the event handler function is an argument inside
-    // // the eventListener function call.
+    // EVENTHANDLER
+    // specify a function that will get called when the event occurs...
+    // the eventHandler is nothing more than a function.  
+    // Note: The only distinction between a typical function and an event 
+    // handler function is the event handler function is an argument inside
+    // the eventListener function call.
     
-    // // useCapture
-    // // true or false...
+    // USECAPTURE
+    // true or false...
 
 
-    // Event Listener
-    // document.addEventListener("click", changeColor, flase);
-    // Event Handler
+    // // Event Listener
+    // document.addEventListener("click", changeColor, false);
+    
+    // // Event Handler
     // function changeColor() {
-    //   document.body.style.backgroundColor = 'dark red';
+    //   document.body.style.backgroundColor = '#FFC926';
     // }
 
-    // 2) REACTING
+    // This Event Handler also provides access to the underlying 
+    // event object as part of its arguments.  The event argument 'e'
+    // points to an Event object and this object is passed in as part
+    // of the event firing.  This Event object contains properties
+    // 'relevant to the event that was fired'.  Mouse events will have
+    // different properties compared to keyboard events.
+    // Common properties include:
+    // 1) currentTarget
+    // 2) target
+    // 3) preventDefault
+    // 4) stopPropogation
+    // 5) type 
+
+    // // // REMOVING AN EVENT LISTENER with removeEventListener
+    // document.addEventListener("click", changeColor, false);
+    // // document.removeEventListener("click", changeColor, false)
+    // function changeColor() {
+    //   document.body.style.backgroundColor = 'salmon';
+    // }
+
+    // #--------------------------------------------------------------------------#
+    // EVENT BUBBLING AND CAPTURING
+    // #--------------------------------------------------------------------------#
+    
+    // what happens when event gets fired...
+    
+      
 
   </script>
 </body>
