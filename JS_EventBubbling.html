@@ -22,10 +22,30 @@
   <script>
     'use strict';
     // #--------------------------------------------------------------------------#
-    // Event Bubbling
+    // Event Capturing and Bubbling
     // #--------------------------------------------------------------------------#
     
-    
+    // What is it?  Lets say buttonOne is clicked.  The click event actually 
+    // originates at the root of the DOM, the "window element" then travels
+    // down each child element until it reaches buttonOne (event target). Then
+    // goes back up the root.
+    // This process where you initiate the event and the event journeys down
+    // the DOM from the "root" to the "event target" is called the "Event 
+    // Capturing Phase (phase 1)".  On its way back up to the root is called 
+    // "Event Bubbling Phase (phase 2)".
+
+    // // Top situations where you should know which phase your event is in:
+    // 1) Dragging an element around the screen and ensuring the drag still 
+    // happens even if the element dragging slips out from under the cursor.
+    // 2) Nested menus that reveal submenus when you hover over them.
+    // 3) You have multiple event handlers on both phases, and you want to 
+    // focus only on the capturing or bubbling phase event handlers exclusively.
+    // 4) A third party component/control library has its own eventing logic
+    // and you want to circumvent it for your own custom behavior.
+    // 5) You want to override some built-in/default browser such as when 
+    // you click on the scrollbar or give focus to a text field.
+
+
     // Mouse events will have different properties compared to keyboard events.
     // Common properties include:
     // 1) currentTarget
