@@ -65,17 +65,28 @@
     // 5) You want to override some built-in/default browser such as when 
     // you click on the scrollbar or give focus to a text field.
 
+    // Lets say you're listening for a click event on the three_a element.
+    // to STOP the event from continueing through the phases:
+    // var theElement = document.querySelector("#three_a");
+    // function doSomething(e) {
+    //   e.stopPropagation();
+    // }
+    // So when you click buttonOne the event will stop after it gets to 
+    // three_a element.  Because the three_a element is listening for the
+    // click event, the event handler associated with it will get called:
+    // function doSomething(e) {
+    //   e.stopPropagation();
+    // }
+    // 
+    // The click event will never reach the buttonOne element.
 
-    // Mouse events will have different properties compared to keyboard events.
-    // Common properties include:
-    // 1) currentTarget
-    // 2) target
-    // 3) preventDefault
-    // 4) stopPropogation
-    // 5) type 
-
-    // SOMETHING NEW AND SOMETHING OLD
-    
+    // Another event object function:  preventDefault()
+    // Remove default reactions your browser instinctively knows:
+    // for example: preventing text cursor, checking a checkbox,
+    // scrolling in a scrollable area, these are default reactions.
+    // You can turn these off using preventDefault()
+    // see example of parallax scrolling at:
+    // http://bit.ly/kirupaParallax
 
   </script>
 </body>
