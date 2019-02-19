@@ -24,7 +24,23 @@
     // #--------------------------------------------------------------------------#
     // Event Capturing and Bubbling
     // #--------------------------------------------------------------------------#
-    
+
+    //                     Window    <------ Root
+    //                       |
+    //                    Document
+    //                       | 
+    //                      HTML
+    //                        \
+    //                      Body  
+    //                     /    \   
+    //                   one_a  one_b
+    //                     |       
+    //                    two
+    //                    /  \
+    //             three_a     three_b
+    //               /          \         \
+    //   (clicked)buttonOne    buttonTwo   buttonThree
+    // 
     // What is it?  Lets say buttonOne is clicked.  The click event actually 
     // originates at the root of the DOM, the "window element" then travels
     // down each child element until it reaches buttonOne (event target). Then
@@ -33,6 +49,10 @@
     // the DOM from the "root" to the "event target" is called the "Event 
     // Capturing Phase (phase 1)".  On its way back up to the root is called 
     // "Event Bubbling Phase (phase 2)".
+
+    // Choosing the phase is as easy as specifying true or false as  
+    // part of your addEventListener call like this:
+    // item.addEventListener("click", doSomething, true);
 
     // // Top situations where you should know which phase your event is in:
     // 1) Dragging an element around the screen and ensuring the drag still 
