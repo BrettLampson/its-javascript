@@ -73,12 +73,39 @@
     // #--------------------------------------------------------------------------#
 
     // Common ones:
-    // click, dblclick, mouseover, moseout, mouseenter, mouseleave, mousedown,
-    // mouseup, mousemove, contextmenu, mousewheel, DOMMouseScroll
+    // click          - self explanatory
+    // dblclick       - self explanatory
+    // mouseover      - self explanatory, MUCH MORE COMMON THAN MOUSEENTER
+    // mouseout       - mouseover leaves the element (fires for each child as well)
+    // mouseenter     - Like mouseover, but fires only once even for child elements
+    // mouseleave     - Like mouseout, but fires only once even for child elements
+    // mousedown      - a down click
+    // mouseup        - a release click
+    // mousemove      - event fires A LOT, for each pixel you move over an element
+    // contextmenu    - Common use preventing menu when RClick
+    // mousewheel     -
+    // DOMMouseScroll - 
     
-    //
+    // CLICK
+    // var button = document.querySelector('#myButton');
+    // button.addEventListener("click", doSomething, false);
+    // function doSomething(e) {
+    //   console.log('mouse clicked on something');
+    // }
     
-      
+    // DBLCLICK
+    // button.addEventListener("dblclick", doSomething, false);
+    // function doSomething(e) {
+    //   console.log('mouse clicked on something...twice');
+    // }
+
+    // CONTEXTMENU
+    // document.addEventListener("contextmenu", hideMenu, false);
+    // function hideMenu(e) {
+    //   e.preventDefault();
+    // }
+    
+    // WIP pg 332
 
   </script>
 </body>
