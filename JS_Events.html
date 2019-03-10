@@ -83,8 +83,8 @@
     // mouseup        - a release click
     // mousemove      - event fires A LOT, for each pixel you move over an element
     // contextmenu    - Common use preventing menu when RClick
-    // mousewheel     -
-    // DOMMouseScroll - 
+    // mousewheel     - Used by IE and Chrome
+    // DOMMouseScroll - Used by Firefox
     
     // CLICK
     // var button = document.querySelector('#myButton');
@@ -105,7 +105,53 @@
     //   e.preventDefault();
     // }
     
-    // WIP pg 332
+    // // MOUSEWHEEL
+    // Event arguments contain a property known as wheelDelta.
+    // which is a positive or negative depending on scrolldirection.
+    
+    // document.addEventListener("mousewheel", mouseWheeling, false);
+    // function mouseWheeling(e) {
+    //   var scrollDirection = e.wheelDelta || -1 * e.detail;
+    //   if (scrollDirection > 0) {
+    //     console.log("scrolling up! " + scrollDirection);
+    //   } else {
+    //     console.log("scrolling down! " + scrollDirection);
+    //   }
+    // }
+
+    // document.addEventListener("DOMMouseScroll", mouseWheeling, false); // firefox
+
+    // MOUSEEVENT PROPERTIES
+    // screenX and screenY - the distance your mouse cursor is from top left corner
+
+    // document.addEventListener("mousemove", mouseMoving, false);
+    // function mouseMoving(e) {
+    //   console.log(e.screenX + " " + e.screenY);
+    // }
+
+    // Which mouse button clicked? 0=left click, 1=middle, 3=right click
+
+
+    // KEYBOARD EVENTS
+    // keydown  - event fires when you press down on any key
+    // keypress - event fires only when you press down on a character/number key
+    // keyup    - event fires when you release any key pressed
+    
+    // window.addEventListener("keydown", dealWithKeyboard, false);
+    // window.addEventListener("keypress", dealWithKeyboard, false);
+    // window.addEventListener("keyup", dealWithKeyboard, false);
+    // function dealWithKeyboard(e) {
+    //   // gets called when any keyboard event is heard
+    // }
+    
+    // KEYBOARD PROPERTIES
+    // KeyCode  - Every key has a code attached to it, this returns that code
+    // to get this code list to go: http://bit.ly/kirupaKeyCode
+    // CharCode - 
+    // ctrlKey  - Returns true if ctrl key is pressed
+    // altKey   - Returns true if alt key is pressed
+    // shiftKey - Returns true if shift key is pressed
+    // metaKey  - Returns true if META key is pressed (windows/command keys)
 
   </script>
 </body>
