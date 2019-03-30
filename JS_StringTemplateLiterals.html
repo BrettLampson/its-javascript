@@ -16,25 +16,17 @@
 
     // // String Template Literals
     // function greet(greeting, fname, nickname, lname) {
-    //  return `${greeting} ${fname} ${nickname} ${lname}`
+    //  return `${greeting} ${fname} ${lname}, your nickname is ${nickname}.`
     // }
-    // console.log(greet('Good-ay', 'Brett', 'Brettskit', 'Lampson'));
+    // console.log(greet('Hi', 'Brett', '"Brettskit"', 'Lampson'));
 
-
-    // //  String Template Literals
-    // function greet(greeting, fname, nickname, lname) {
-    //   return `${greeting} ${fname} ${nickname} ${lname}`
-    // }
-    // console.log(greet('Good-ay', 'Brett', 'skizzle', 'Lampson'));
-
-
-    // const myHomeCity = 'Covington'
-    // const myHomeState = 'WA'
-    // const myHomeCountry = 'USA'
-    // function combineAll (city, state, country) {
-    //   console.log(`I'm using ${myHomeCity} to cook, which is in drawer ${myHomeState}, found inside kitchen ${myHomeCountry}`)
-    // }
-    // combineAll(myHomeCity, myHomeState, myHomeCountry)
+    const City = 'Covington'
+    const State = 'Washington'
+    const Country = 'USA'
+    function geo (city, state, country) {
+      console.log(`${City} is a city in ${State}, ${Country}`)
+    }
+    geo(City, State, Country)
     
 
   </script>
