@@ -77,16 +77,16 @@
     // #--------------------------------------------------------------------------#
     // ANONYMOUS FUNCTIONS
     // These functions can only be called if associated with a variable as shown 
-    var cup = function() {
-      return "I'm a " + cup.name
-    }
-    var bowl = cup();
-    console.log(bowl);  // I'm a cup
+    // var cup = function() {
+    //   return "I'm a " + cup.name
+    // }
+    // var bowl = cup();
+    // console.log(bowl);  // I'm a cup
     
-    // Anonymous functions can also be called as part of another function.
-    window.setTimeout(function() {
-      console.log('This delay took 2000ms');
-    }, 2000);
+    // // Anonymous functions can also be called as part of another function.
+    // window.setTimeout(function() {
+    //   console.log('This delay took 2000ms');
+    // }, 2000);
 
     
     // #--------------------------------------------------------------------------#
@@ -103,6 +103,27 @@
     //   }
     //   return result;
     // };
+
+
+    // #--------------------------------------------------------------------------#
+    // // HIGHER ORDER FUNCTIONS
+    // Functions that operate on other functions, either by taking them as
+    // arguments or by returning them.  One area where higher-order functions
+    // shine is data processing.
+
+    // filter out elements in an array that don't pass a test.
+    // function filter(array, test) {
+    //   let pass = [];
+    //   for (let element of array) {
+    //     if (test(element)) {
+    //       passed.push(element);
+    //     }
+    //   }
+    //   return passed;
+    // }
+
+    // console.log(filter(SCRIPTS, script => script.living));
+    
 
 
     // #--------------------------------------------------------------------------#
