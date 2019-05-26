@@ -67,15 +67,15 @@
     // // declared variables, then initializes them by default
     // // with a value of "undefined". Because the function
     // // sees foo before its properly defined.
-    // let foo = 'Hello';
-    // function doSomethingClever() {
-    //   console.log(foo);
-    //   let foo = 'Good Bye';
-    //   console.log(foo);
-    // }
-    // doSomethingClever();
-    // //undefined
-    // //'Good bye'
+    let foo = 'Hello';
+    function doSomethingClever() {
+      console.log(foo);
+      let foo = 'Good Bye';
+      console.log(foo);
+    }
+    doSomethingClever();
+    //undefined
+    //'Good bye'
 
 
 
