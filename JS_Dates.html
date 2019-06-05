@@ -11,24 +11,42 @@
     // DATES
     // #--------------------------------------------------------------------------#
     
-    // var thisMoment = new Date();
-    // console.log(thisMoment.getDate());         // 30 (day of the month)
-    // console.log(thisMoment.getDay());          // 6  (day of the week)
-    // console.log(thisMoment.getFullYear());     // 2019 
-    // console.log(thisMoment.getHours());        // 21 
-    // console.log(thisMoment.getMinutes());      // 57
-    // console.log(thisMoment.getMilliseconds()); // 910
-    // console.log(thisMoment.getMonth());        // 10
-    // console.log(thisMoment.getSeconds());      // 32
-    // console.log(thisMoment.getTime());         // 1542520652910 
+    // month numbers start at zero (dec is 11)
+    // day numbers start at 1 (4th is 4)
+
+    // console.log(new Date());
+
+    var thisMoment = new Date();
+    console.log(thisMoment.getDate());         // 30 (day of the month)
+    console.log(thisMoment.getMonth());        // 10
+    console.log(thisMoment.getDay());          // 6  (day of   the week)
+    console.log(thisMoment.getFullYear());     // 2019 
+    console.log(thisMoment.getHours());        // 21 
+    console.log(thisMoment.getMinutes());      // 57
+    console.log(thisMoment.getSeconds());      // 32
+    console.log(thisMoment.getMilliseconds()); // 910
+    console.log(thisMoment.getTime());         // 1542520652910 
+
+
+    // var today = {
+    //   month = thisMoment.getMonth(),
+    //   day = thisMoment.getDay(),
+    //   year = thisMoment.getFullYear(),
+    //   hour = thisMoment.getHours(),
+    //   minute = thisMoment.getMinutes(),
+    // };
+
+    // console.log(today.month);
     
-    var today = {
-      month = thisMoment.getMonth(),
-      day = thisMoment.getDay(),
-      year = thisMoment.getFullYear(),
-      hour = thisMoment.getHours(),
-      minute = thisMoment.getMinutes(),
-    };
+
+    // function getDate(string) {
+    //   let [_, month, day, year] =
+    //     /(\d{1, 2})-(\d{1, 2})-(\d{4})/.exec(string);
+    //   return new Date(year, month -1, day);
+    // }
+    // console.log(getDate("1-30-2003"));
+    
+    
 
   </script>
 </body>
